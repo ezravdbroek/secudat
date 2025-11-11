@@ -1,10 +1,11 @@
 ---
 import Layout from '../layouts/Layout.astro';
 import Header from '../components/Header.astro';
-import ModernAboutHero from '../components/ModernAboutHero.astro';
-import CompanyInfo from '../components/CompanyInfo.astro';
+import AboutHero from '../components/AboutHero.astro';
+import CompanyStory from '../components/CompanyStory.astro';
+import CompanyValues from '../components/CompanyValues.astro';
 import TeamSection from '../components/TeamSection.astro';
-import ModernContactForm from '../components/ModernContactForm.astro';
+import TrustBadges from '../components/TrustBadges.astro';
 import Footer from '../components/Footer.astro';
 ---
 
@@ -12,10 +13,11 @@ import Footer from '../components/Footer.astro';
 	<div class="page-container">
 		<Header />
 		<main>
-			<ModernAboutHero />
-			<CompanyInfo />
+			<AboutHero />
+			<CompanyStory />
+			<CompanyValues />
 			<TeamSection />
-			<ModernContactForm />
+			<TrustBadges />
 		</main>
 		<Footer />
 	</div>
@@ -142,13 +144,12 @@ import Footer from '../components/Footer.astro';
 		// Enhanced parallax effect for floating elements
 		const handleScroll = () => {
 			const scrolled = window.pageYOffset;
-			const parallaxElements = document.querySelectorAll('.security-icon, .contact-float, .tech-card');
+			const parallaxElements = document.querySelectorAll('.security-icon, .tech-card, .company-feature');
 
 			parallaxElements.forEach((element, index) => {
-				const speed = 0.2 + (index * 0.1);
+				const speed = 0.2 + (index * 0.05);
 				const yPos = -(scrolled * speed);
-				const xPos = Math.sin(scrolled * 0.001) * 10;
-				element.style.transform = `translateY(${yPos}px) translateX(${xPos}px)`;
+				element.style.transform = `translateY(${yPos}px)`;
 			});
 		};
 
@@ -161,6 +162,8 @@ import Footer from '../components/Footer.astro';
 				setTimeout(() => { ticking = false; }, 16);
 			}
 		};
+
+		window.addEventListener('scroll', requestTick, { passive: true });
 
 		// Smooth reveal animations on scroll
 		let lastScroll = 0;
@@ -190,46 +193,5 @@ import Footer from '../components/Footer.astro';
 		};
 
 		window.addEventListener('scroll', optimizedScrollHandler, { passive: true });
-
-		// Add smooth entrance animations for cards
-		document.querySelectorAll('.info-card, .tech-card, .value-item').forEach((card, index) => {
-			card.style.animationDelay = `${index * 0.1}s`;
-			card.style.animation = 'cardEntrance 0.6s ease-out forwards';
-		});
-
-		// Card entrance animation
-		const style = document.createElement('style');
-		style.textContent = `
-			@keyframes cardEntrance {
-				from {
-					opacity: 0;
-					transform: translateY(20px) scale(0.95);
-				}
-				to {
-					opacity: 1;
-					transform: translateY(0) scale(1);
-				}
-			}
-		`;
-		document.head.appendChild(style);
-
-		// Enhanced hover effects for interactive elements
-		document.querySelectorAll('button, .info-card, .tech-card, .emergency-button').forEach(element => {
-			element.addEventListener('mouseenter', function() {
-				this.style.transition = 'all 0.3s cubic-bezier(0.4, 0, 0.2, 1)';
-			});
-		});
-
-		// Form focus animations
-		const formInputs = document.querySelectorAll('input, select, textarea');
-		formInputs.forEach(input => {
-			input.addEventListener('focus', function() {
-				this.parentElement.style.transform = 'scale(1.02)';
-			});
-
-			input.addEventListener('blur', function() {
-				this.parentElement.style.transform = 'scale(1)';
-			});
-		});
 	});
 </script>
