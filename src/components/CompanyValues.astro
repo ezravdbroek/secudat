@@ -330,31 +330,115 @@
 	}
 
 	/* Responsive design */
+	@media (max-width: 1024px) {
+		.values-grid {
+			grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+		}
+	}
+
 	@media (max-width: 768px) {
 		.company-values {
 			padding: 60px 20px;
 		}
 
 		.values-header {
-			margin-bottom: 60px;
+			margin-bottom: 50px;
+			text-align: center;
 		}
 
 		.values-grid {
 			grid-template-columns: 1fr;
-			gap: 20px;
+			gap: 24px;
 			margin-bottom: 60px;
 		}
 
 		.value-card {
-			padding: 30px;
+			padding: 30px 25px;
+		}
+
+		.value-icon {
+			width: 70px;
+			height: 70px;
+		}
+
+		.value-icon svg {
+			width: 32px;
+			height: 32px;
+		}
+
+		.value-title {
+			font-size: 1.4rem;
+		}
+
+		.value-description {
+			font-size: 0.95rem;
 		}
 
 		.values-cta {
 			padding: 40px 24px;
+			text-align: center;
 		}
 
 		.section-title {
 			font-size: 2rem;
+		}
+
+		.section-description {
+			font-size: 1rem;
+		}
+
+		.cta-title {
+			font-size: 1.8rem;
+		}
+
+		.cta-description {
+			font-size: 1rem;
+		}
+	}
+
+	@media (max-width: 480px) {
+		.company-values {
+			padding: 40px 16px;
+		}
+
+		.values-header {
+			margin-bottom: 40px;
+		}
+
+		.value-card {
+			padding: 25px 20px;
+		}
+
+		.value-icon {
+			width: 60px;
+			height: 60px;
+		}
+
+		.value-icon svg {
+			width: 28px;
+			height: 28px;
+		}
+
+		.value-title {
+			font-size: 1.3rem;
+		}
+
+		.value-description {
+			font-size: 0.9rem;
+		}
+
+		.values-cta {
+			padding: 30px 20px;
+		}
+
+		.section-title {
+			font-size: 1.8rem;
+		}
+
+		.cta-btn {
+			padding: 14px 24px;
+			font-size: 0.95rem;
+			min-height: 48px;
 		}
 	}
 </style>

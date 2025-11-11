@@ -76,7 +76,7 @@
 				<div class="story-image-container">
 					<div class="story-image">
 						<!-- Company journey illustration -->
-						<svg width="400" height="500" viewBox="0 0 400 500" fill="none" xmlns="http://www.w3.org/2000/svg">
+						<svg width="100%" height="100%" viewBox="0 0 400 500" fill="none" xmlns="http://www.w3.org/2000/svg" class="story-timeline-svg">
 							<!-- Timeline path -->
 							<path d="M50 450V50Q50 30 70 30H130Q150 30 150 50V100Q150 120 170 120H230Q250 120 250 100V50Q250 30 270 30H330Q350 30 350 50V450"
 								  stroke="#25c1ce" stroke-width="3" fill="none" stroke-dasharray="5,5" opacity="0.3"/>
@@ -352,6 +352,7 @@
 		border-radius: 20px;
 		padding: 40px;
 		border: 1px solid rgba(37, 193, 206, 0.1);
+		aspect-ratio: 4/5;
 	}
 
 	.story-mission {
@@ -415,7 +416,7 @@
 		.story-content {
 			grid-template-columns: 1fr;
 			gap: 50px;
-		}
+			}
 
 		.story-mission {
 			grid-template-columns: 1fr;
@@ -440,6 +441,58 @@
 
 		.section-title {
 			font-size: 2rem;
+		}
+
+		.story-image-container {
+			max-width: 350px;
+		}
+
+		.story-image {
+			padding: 30px 20px;
+		}
+	}
+
+	@media (max-width: 480px) {
+		.company-story {
+			padding: 40px 16px;
+		}
+
+		.story-content {
+			gap: 40px;
+		}
+
+		.story-mission {
+			gap: 20px;
+		}
+
+		.story-chapter {
+			padding: 20px;
+		}
+
+		.chapter-number {
+			width: 50px;
+			height: 50px;
+			font-size: 16px;
+		}
+
+		.mission-content {
+			padding: 20px 16px;
+		}
+
+		.section-title {
+			font-size: 1.75rem;
+		}
+
+		.story-image-container {
+			max-width: 300px;
+		}
+
+		.story-image {
+			padding: 25px 16px;
+		}
+
+		.story-mission {
+			text-align: center;
 		}
 	}
 </style>

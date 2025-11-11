@@ -34,7 +34,12 @@
 		<div class="hero-content">
 			<div class="hero-text slide-in-left">
 				<div class="hero-badge">
-					<span class="badge-text">🛡️ Uw Beveiligingsexpert</span>
+					<span class="badge-text">
+						<svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" style="margin-right: 6px; vertical-align: middle;">
+							<path d="M12 2L15.09 8.26L22 9L17 14L18.18 21.02L12 17.77L5.82 21.02L7 14L2 9L8.91 8.26L12 2Z" stroke="#25c1ce" stroke-width="2"/>
+						</svg>
+						UW BEOVEILIGINGSEXPERT
+					</span>
 				</div>
 				<h1 class="hero-title">
 					Professionele <span class="highlight">Beveiligingscamera's</span><br/>
@@ -70,15 +75,33 @@
 					</div>
 					<div class="floating-cards">
 						<div class="feature-card card-1">
-							<div class="card-icon">📹</div>
+							<div class="card-icon">
+								<svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+									<rect x="2" y="4" width="20" height="16" rx="2" stroke="#25c1ce" stroke-width="2"/>
+									<circle cx="12" cy="12" r="3" fill="#25c1ce" opacity="0.8"/>
+								</svg>
+							</div>
 							<div class="card-text">HD Kwaliteit</div>
 						</div>
 						<div class="feature-card card-2">
-							<div class="card-icon">🔒</div>
+							<div class="card-icon">
+								<svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+									<path d="M12 2L19 7V11.5C19 16.5 16 20.5 12 22C8 20.5 5 16.5 5 11.5V7L12 2Z" stroke="#25c1ce" stroke-width="2"/>
+									<circle cx="12" cy="11" r="2" fill="#25c1ce"/>
+									<path d="M12 13V16" stroke="#25c1ce" stroke-width="2"/>
+								</svg>
+							</div>
 							<div class="card-text">24/7 Beveiliging</div>
 						</div>
 						<div class="feature-card card-3">
-							<div class="card-icon">📱</div>
+							<div class="card-icon">
+								<svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+									<rect x="2" y="4" width="20" height="16" rx="2" stroke="#25c1ce" stroke-width="2"/>
+									<path d="M8 7V3C8 2.44772 8.44772 2 9 2H15C15.5523 2 16 2.44772 16 3V7" stroke="#25c1ce" stroke-width="2"/>
+									<circle cx="12" cy="12" r="3" fill="#25c1ce" opacity="0.6"/>
+									<path d="M12 10V14M10 12H14" stroke="white" stroke-width="2"/>
+								</svg>
+							</div>
 							<div class="card-text">Remote Access</div>
 						</div>
 					</div>
@@ -453,7 +476,12 @@
 	}
 
 	.card-icon {
-		font-size: 20px;
+		width: 40px;
+		height: 40px;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		margin-bottom: 12px;
 	}
 
 	.card-text {
@@ -497,7 +525,30 @@
 	}
 
 	/* Responsive design */
+	@media (max-width: 1024px) {
+		.hero-content {
+			gap: 50px;
+		}
+
+		.hero-title {
+			font-size: 3rem;
+		}
+
+		.hero-description {
+			font-size: 1.1rem;
+		}
+
+		.hero-image-container {
+			max-width: 380px;
+		}
+	}
+
 	@media (max-width: 768px) {
+		.hero {
+			min-height: auto;
+			padding: 100px 0 80px;
+		}
+
 		.hero-content {
 			grid-template-columns: 1fr;
 			gap: 40px;
@@ -506,28 +557,104 @@
 
 		.hero-title {
 			font-size: 2.5rem;
+			line-height: 1.1;
 		}
 
 		.hero-description {
-			margin: 0 auto 40px;
+			font-size: 1rem;
+			margin: 0 auto 32px;
+			max-width: 100%;
 		}
 
 		.hero-buttons {
 			justify-content: center;
+			flex-direction: column;
+			align-items: center;
+			gap: 16px;
+		}
+
+		.btn-primary, .btn-secondary {
+			width: 100%;
+			max-width: 280px;
+			justify-content: center;
+			padding: 16px 24px;
+			font-size: 1rem;
+			min-height: 52px;
 		}
 
 		.hero-stats {
 			grid-template-columns: repeat(2, 1fr);
-			gap: 30px;
-			padding: 30px 20px;
+			gap: 24px;
+			padding: 32px 24px;
 		}
 
 		.stat-number {
 			font-size: 2rem;
 		}
 
+		.stat-label {
+			font-size: 0.85rem;
+		}
+
 		.hero-image-container {
-			max-width: 350px;
+			max-width: 320px;
+		}
+
+		.floating-cards {
+			display: none;
+		}
+
+		.floating-elements {
+			display: none;
+		}
+
+		.hero-badge {
+			margin-bottom: 20px;
+		}
+
+		.badge-text {
+			font-size: 12px;
+		}
+
+		.hero-container {
+			padding: 0 16px;
+		}
+	}
+
+	@media (max-width: 480px) {
+		.hero {
+			padding: 80px 0 60px;
+		}
+
+		.hero-title {
+			font-size: 2.2rem;
+		}
+
+		.hero-description {
+			font-size: 0.95rem;
+		}
+
+		.btn-primary, .btn-secondary {
+			padding: 14px 20px;
+			font-size: 0.95rem;
+		}
+
+		.hero-stats {
+			grid-template-columns: repeat(2, 1fr);
+			gap: 20px;
+			padding: 24px 16px;
+		}
+
+		.stat-number {
+			font-size: 1.8rem;
+		}
+
+		.stat-label {
+			font-size: 0.8rem;
+		}
+
+		.hero-image-container {
+			max-width: 280px;
 		}
 	}
 </style>
