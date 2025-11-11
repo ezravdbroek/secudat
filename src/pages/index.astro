@@ -1,0 +1,108 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Header from '../components/Header.astro';
+import Hero from '../components/Hero.astro';
+import ClientLogos from '../components/ClientLogos.astro';
+import Services from '../components/Services.astro';
+import About from '../components/About.astro';
+import ContactForm from '../components/ContactForm.astro';
+import Footer from '../components/Footer.astro';
+---
+
+<Layout>
+	<div class="page-container">
+		<Header />
+		<main>
+			<Hero />
+			<ClientLogos />
+			<Services />
+			<About />
+			<ContactForm />
+		</main>
+		<Footer />
+	</div>
+</Layout>
+
+<style>
+	.page-container {
+		min-height: 100vh;
+		overflow-x: hidden;
+	}
+
+	main {
+		padding-top: 80px; /* Space for fixed header */
+	}
+
+	/* Scroll animations */
+	.fade-in {
+		opacity: 0;
+		transform: translateY(30px);
+		transition: all 0.6s ease-out;
+	}
+
+	.fade-in.visible {
+		opacity: 1;
+		transform: translateY(0);
+	}
+
+	.slide-in-left {
+		opacity: 0;
+		transform: translateX(-50px);
+		transition: all 0.8s ease-out;
+	}
+
+	.slide-in-left.visible {
+		opacity: 1;
+		transform: translateX(0);
+	}
+
+	.slide-in-right {
+		opacity: 0;
+		transform: translateX(50px);
+		transition: all 0.8s ease-out;
+	}
+
+	.slide-in-right.visible {
+		opacity: 1;
+		transform: translateX(0);
+	}
+
+	/* Stagger animations for multiple elements */
+	.stagger-item {
+		opacity: 0;
+		transform: translateY(30px);
+		transition: all 0.6s ease-out;
+	}
+
+	.stagger-item.visible {
+		opacity: 1;
+		transform: translateY(0);
+	}
+
+	.stagger-item:nth-child(1) { transition-delay: 0.1s; }
+	.stagger-item:nth-child(2) { transition-delay: 0.2s; }
+	.stagger-item:nth-child(3) { transition-delay: 0.3s; }
+	.stagger-item:nth-child(4) { transition-delay: 0.4s; }
+	.stagger-item:nth-child(5) { transition-delay: 0.5s; }
+</style>
+
+<script>
+	document.addEventListener('DOMContentLoaded', () => {
+		const observerOptions = {
+			threshold: 0.1,
+			rootMargin: '0px 0px -50px 0px'
+		};
+
+		const observer = new IntersectionObserver((entries) => {
+			entries.forEach(entry => {
+				if (entry.isIntersecting) {
+					entry.target.classList.add('visible');
+				}
+			});
+		}, observerOptions);
+
+		document.querySelectorAll('.fade-in, .slide-in-left, .slide-in-right, .stagger-item').forEach(el => {
+			observer.observe(el);
+		});
+	});
+</script>

@@ -1,0 +1,920 @@
+---
+// ServicesGrid.astro - Modern services grid with interactive cards
+---
+
+<section id="services-grid" class="services-grid-section">
+	<div class="section-container">
+		<div class="section-header fade-in">
+			<div class="section-badge">
+				<span>
+					<svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" style="margin-right: 6px; vertical-align: middle;">
+						<rect x="2" y="4" width="20" height="16" rx="2" stroke="#25c1ce" stroke-width="2"/>
+						<circle cx="12" cy="12" r="3" fill="#25c1ce"/>
+					</svg>
+					BEVEILIGINGSDIENSTEN
+				</span>
+			</div>
+			<h2 class="section-title">
+				Onze <span class="highlight">Specialisaties</span>
+			</h2>
+			<p class="section-description">
+				Professionele beveiligingsoplossingen die uw woning of bedrijf optimaal beschermen
+			</p>
+		</div>
+
+		<div class="services-grid">
+			<!-- Camerabewaking -->
+			<div class="service-card fade-in" data-service="camerabewaking">
+				<div class="card-background">
+					<div class="card-pattern"></div>
+				</div>
+				<div class="card-content">
+					<div class="service-icon">
+						<svg width="70" height="70" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+							<rect x="2" y="4" width="20" height="16" rx="2" stroke="#25c1ce" stroke-width="2"/>
+							<circle cx="12" cy="12" r="4" fill="#25c1ce" opacity="0.8"/>
+							<circle cx="12" cy="12" r="2" fill="white"/>
+							<path d="M12 2L10.07 6.39L4 12L10.07 17.61L12 22L13.93 17.61L20 12L13.93 6.39L12 2Z" stroke="#25c1ce" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" opacity="0.3"/>
+						</svg>
+					</div>
+					<div class="service-info">
+						<h3 class="service-title">Camerabewaking</h3>
+						<p class="service-description">
+							Professionele beveiligingscamera's met de nieuwste technologie voor helder beeld en betrouwbare bewaking.
+						</p>
+						<div class="service-features">
+							<div class="feature">
+								<svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+									<path d="M22 11.08V12C21.9988 14.1564 21.3005 16.2547 20.0093 17.9818C18.7182 19.709 16.9033 20.9725 14.8354 21.5839C12.7674 22.1953 10.5573 22.1219 8.53447 21.3746C6.51168 20.6273 4.78465 19.2461 3.61096 17.4371C2.43727 15.628 1.87979 13.4881 2.02168 11.3363C2.16356 9.18455 2.99721 7.13631 4.39828 5.49706C5.79935 3.85781 7.69279 2.71537 9.79619 2.24013C11.8996 1.7649 14.1003 1.98232 16.07 2.86" stroke="#25c1ce" stroke-width="2"/>
+									<polyline points="22,4 12,14.01 9,11.01" stroke="#25c1ce" stroke-width="2"/>
+								</svg>
+								<span>4K Ultra HD Beeldkwaliteit</span>
+							</div>
+							<div class="feature">
+								<svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+									<circle cx="12" cy="12" r="10" stroke="#25c1ce" stroke-width="2"/>
+									<path d="M12 6v6l4 2" stroke="#25c1ce" stroke-width="2"/>
+								</svg>
+								<span>Nachtzicht tot 30 Meter</span>
+							</div>
+							<div class="feature">
+								<svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+									<rect x="2" y="7" width="20" height="14" rx="2" stroke="#25c1ce" stroke-width="2"/>
+									<path d="M12 11V17M9 14L12 17L15 14" stroke="#25c1ce" stroke-width="2"/>
+								</svg>
+								<span>Remote App Toegang</span>
+							</div>
+						</div>
+						<button class="service-btn" onclick="showServiceDetails('camerabewaking')">
+							<span>Meer Informatie</span>
+							<svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+								<path d="M5 12H19M19 12L12 5M19 12L12 19" stroke="currentColor" stroke-width="2"/>
+							</svg>
+						</button>
+					</div>
+				</div>
+			</div>
+
+			<!-- Alarminstallaties -->
+			<div class="service-card fade-in" data-service="alarminstallaties" style="animation-delay: 0.1s">
+				<div class="card-background">
+					<div class="card-pattern"></div>
+				</div>
+				<div class="card-content">
+					<div class="service-icon">
+						<svg width="70" height="70" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+							<path d="M12 2L19 7V11.5C19 16.5 16 20.5 12 22C8 20.5 5 16.5 5 11.5V7L12 2Z" stroke="#25c1ce" stroke-width="2"/>
+							<circle cx="12" cy="11" r="2" fill="#25c1ce"/>
+							<path d="M12 13V16" stroke="#25c1ce" stroke-width="2"/>
+						</svg>
+					</div>
+					<div class="service-info">
+						<h3 class="service-title">Alarminstallaties</h3>
+						<p class="service-description">
+							Geavanceerde alarmsystemen met directe koppeling naar meldkamer voor maximale veiligheid.
+						</p>
+						<div class="service-features">
+							<div class="feature">
+								<svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+									<circle cx="12" cy="12" r="3" stroke="#25c1ce" stroke-width="2"/>
+									<path d="M12 1v6m0 6v6m11-7h-6m-6 0H1" stroke="#25c1ce" stroke-width="2"/>
+								</svg>
+								<span>Bewegingssensoren</span>
+							</div>
+							<div class="feature">
+								<svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+									<rect x="3" y="11" width="18" height="10" rx="2" stroke="#25c1ce" stroke-width="2"/>
+									<path d="M7 11V7" stroke="#25c1ce" stroke-width="2"/>
+								</svg>
+								<span>Deur/Raam Contacten</span>
+							</div>
+							<div class="feature">
+								<svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+									<path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9" stroke="#25c1ce" stroke-width="2"/>
+									<path d="M13.73 21a2 2 0 0 1-3.46 0" stroke="#25c1ce" stroke-width="2"/>
+								</svg>
+								<span>24/7 Meldkamer</span>
+							</div>
+						</div>
+						<button class="service-btn" onclick="showServiceDetails('alarminstallaties')">
+							<span>Meer Informatie</span>
+							<svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+								<path d="M5 12H19M19 12L12 5M19 12L12 19" stroke="currentColor" stroke-width="2"/>
+							</svg>
+						</button>
+					</div>
+				</div>
+			</div>
+
+			<!-- Toegangscontrole -->
+			<div class="service-card fade-in" data-service="toegangscontrole" style="animation-delay: 0.2s">
+				<div class="card-background">
+					<div class="card-pattern"></div>
+				</div>
+				<div class="card-content">
+					<div class="service-icon">
+						<svg width="70" height="70" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+							<rect x="3" y="11" width="18" height="10" rx="2" stroke="#25c1ce" stroke-width="2"/>
+							<path d="M7 11V7C7 4.23858 9.23858 2 12 2C14.7614 2 17 4.23858 17 7V11" stroke="#25c1ce" stroke-width="2"/>
+							<circle cx="12" cy="16" r="1" fill="#25c1ce"/>
+						</svg>
+					</div>
+					<div class="service-info">
+						<h3 class="service-title">Toegangscontrole</h3>
+						<p class="service-description">
+							Modern toegangsbeheer met keycards, vingerafdruk scanners en geavanceerde systemen.
+						</p>
+						<div class="service-features">
+							<div class="feature">
+								<svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+									<rect x="2" y="7" width="20" height="14" rx="2" stroke="#25c1ce" stroke-width="2"/>
+									<circle cx="9" cy="14" r="2" fill="#25c1ce"/>
+								</svg>
+								<span>Keycard Systemen</span>
+							</div>
+							<div class="feature">
+								<svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+									<rect x="2" y="7" width="20" height="14" rx="2" stroke="#25c1ce" stroke-width="2"/>
+									<path d="M7 12V10C7 8.89543 7.89543 8 9 8H15C16.1046 8 17 8.89543 17 10V12" stroke="#25c1ce" stroke-width="2"/>
+								</svg>
+								<span>Biometrische Scanners</span>
+							</div>
+							<div class="feature">
+								<svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+									<rect x="2" y="4" width="20" height="16" rx="2" stroke="#25c1ce" stroke-width="2"/>
+									<circle cx="8" cy="10" r="2" fill="#25c1ce"/>
+									<circle cx="16" cy="10" r="2" fill="#25c1ce"/>
+								</svg>
+								<span>Video Intercom</span>
+							</div>
+						</div>
+						<button class="service-btn" onclick="showServiceDetails('toegangscontrole')">
+							<span>Meer Informatie</span>
+							<svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+								<path d="M5 12H19M19 12L12 5M19 12L12 19" stroke="currentColor" stroke-width="2"/>
+							</svg>
+						</button>
+					</div>
+				</div>
+			</div>
+
+			<!-- Onderhoud & Support -->
+			<div class="service-card fade-in" data-service="onderhoud" style="animation-delay: 0.3s">
+				<div class="card-background">
+					<div class="card-pattern"></div>
+				</div>
+				<div class="card-content">
+					<div class="service-icon">
+						<svg width="70" height="70" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+							<circle cx="12" cy="12" r="10" stroke="#25c1ce" stroke-width="2"/>
+							<path d="M12 6v6l4 2" stroke="#25c1ce" stroke-width="2"/>
+							<path d="M19 14l1.5-7.5L17 4l-1.5 7.5L19 14z" stroke="#25c1ce" stroke-width="2"/>
+							<path d="M5 14l1.5-7.5L7 4l-1.5 7.5L5 14z" stroke="#25c1ce" stroke-width="2"/>
+						</svg>
+					</div>
+					<div class="service-info">
+						<h3 class="service-title">Onderhoud & Support</h3>
+						<p class="service-description">
+							Professioneel onderhoud en 24/7 technische support voor al uw beveiligingssystemen.
+						</p>
+						<div class="service-features">
+							<div class="feature">
+								<svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+									<circle cx="12" cy="12" r="10" stroke="#25c1ce" stroke-width="2"/>
+									<polyline points="12,6 12,12 16,14" stroke="#25c1ce" stroke-width="2"/>
+								</svg>
+								<span>Periodiek Onderhoud</span>
+							</div>
+							<div class="feature">
+								<svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+									<rect x="2" y="11" width="20" height="10" rx="2" stroke="#25c1ce" stroke-width="2"/>
+									<path d="M7 11V9C7 7.34315 8.34315 6 10 6H14C15.6569 6 17 7.34315 17 9V11" stroke="#25c1ce" stroke-width="2"/>
+								</svg>
+								<span>24/7 Helpdesk</span>
+							</div>
+							<div class="feature">
+								<svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+									<path d="M13 2L3 14H12L11 22L21 10H12L13 2Z" stroke="#25c1ce" stroke-width="2"/>
+								</svg>
+								<span>Spoed Service</span>
+							</div>
+						</div>
+						<button class="service-btn" onclick="showServiceDetails('onderhoud')">
+							<span>Meer Informatie</span>
+							<svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+								<path d="M5 12H19M19 12L12 5M19 12L12 19" stroke="currentColor" stroke-width="2"/>
+							</svg>
+						</button>
+					</div>
+				</div>
+			</div>
+
+			<!-- Smart Security -->
+			<div class="service-card fade-in" data-service="smart-security" style="animation-delay: 0.4s">
+				<div class="card-background">
+					<div class="card-pattern"></div>
+				</div>
+				<div class="card-content">
+					<div class="service-icon">
+						<svg width="70" height="70" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+							<rect x="2" y="4" width="20" height="16" rx="2" stroke="#25c1ce" stroke-width="2"/>
+							<path d="M8 7V3C8 2.44772 8.44772 2 9 2H15C15.5523 2 16 2.44772 16 3V7" stroke="#25c1ce" stroke-width="2"/>
+							<circle cx="12" cy="12" r="3" fill="#25c1ce" opacity="0.6"/>
+							<path d="M12 10V14M10 12H14" stroke="white" stroke-width="2"/>
+						</svg>
+					</div>
+					<div class="service-info">
+						<h3 class="service-title">Smart Security</h3>
+						<p class="service-description">
+							Integratie met smart home systemen voor geautomatiseerde beveiliging en remote controle.
+						</p>
+						<div class="service-features">
+							<div class="feature">
+								<svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+									<rect x="2" y="3" width="20" height="14" rx="2" stroke="#25c1ce" stroke-width="2"/>
+									<line x1="8" y1="21" x2="16" y2="21" stroke="#25c1ce" stroke-width="2"/>
+									<line x1="12" y1="17" x2="12" y2="21" stroke="#25c1ce" stroke-width="2"/>
+								</svg>
+								<span>Smart Home Integratie</span>
+							</div>
+							<div class="feature">
+								<svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+									<circle cx="12" cy="12" r="3" stroke="#25c1ce" stroke-width="2"/>
+									<path d="M12 1v6m0 6v6m4.22-13.22l4.24 4.24" stroke="#25c1ce" stroke-width="2"/>
+								</svg>
+								<span>Automatisering</span>
+							</div>
+							<div class="feature">
+								<svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+									<path d="M2 12s3-7 10-7 10 7 10 7-3 7-10 7-10-7-10-7" stroke="#25c1ce" stroke-width="2"/>
+									<circle cx="12" cy="12" r="3" stroke="#25c1ce" stroke-width="2"/>
+								</svg>
+								<span>Mobile App</span>
+							</div>
+						</div>
+						<button class="service-btn" onclick="showServiceDetails('smart-security')">
+							<span>Meer Informatie</span>
+							<svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+								<path d="M5 12H19M19 12L12 5M19 12L12 19" stroke="currentColor" stroke-width="2"/>
+							</svg>
+						</button>
+					</div>
+				</div>
+			</div>
+
+			<!-- Consultancy -->
+			<div class="service-card fade-in" data-service="consultancy" style="animation-delay: 0.5s">
+				<div class="card-background">
+					<div class="card-pattern"></div>
+				</div>
+				<div class="card-content">
+					<div class="service-icon">
+						<svg width="70" height="70" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+							<path d="M9 11H15M12 8V14M12 2L10.07 6.39L4 12L10.07 17.61L12 22L13.93 17.61L20 12L13.93 6.39L12 2Z" stroke="#25c1ce" stroke-width="2"/>
+							<circle cx="12" cy="12" r="2" fill="#25c1ce"/>
+						</svg>
+					</div>
+					<div class="service-info">
+						<h3 class="service-title">Veiligheidsadvies</h3>
+						<p class="service-description">
+							Professioneel security advies en risicoanalyse voor de beste beveiligingsoplossing.
+						</p>
+						<div class="service-features">
+							<div class="feature">
+								<svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+									<path d="M9 11H15M12 8V14" stroke="#25c1ce" stroke-width="2"/>
+								</svg>
+								<span>Risico Analyse</span>
+							</div>
+							<div class="feature">
+								<svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+									<rect x="3" y="3" width="18" height="18" rx="2" stroke="#25c1ce" stroke-width="2"/>
+									<path d="M3 9h18M9 3v18" stroke="#25c1ce" stroke-width="2"/>
+								</svg>
+								<span>Maatwerk Advies</span>
+							</div>
+							<div class="feature">
+								<svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+									<circle cx="12" cy="12" r="10" stroke="#25c1ce" stroke-width="2"/>
+									<path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3" stroke="#25c1ce" stroke-width="2"/>
+									<line x1="12" y1="17" x2="12.01" y2="17" stroke="#25c1ce" stroke-width="2"/>
+								</svg>
+								<span>Gratis Inrichtingsplan</span>
+							</div>
+						</div>
+						<button class="service-btn" onclick="showServiceDetails('consultancy')">
+							<span>Meer Informatie</span>
+							<svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+								<path d="M5 12H19M19 12L12 5M19 12L12 19" stroke="currentColor" stroke-width="2"/>
+							</svg>
+						</button>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<!-- CTA Section -->
+		<div class="cta-section fade-in">
+			<div class="cta-content">
+				<div class="cta-badge">
+					<span>NEED HELP?</span>
+				</div>
+				<h3 class="cta-title">Kunt u niet kiezen?</h3>
+				<p class="cta-description">
+					Onze experts helpen u graag bij het samenstellen van de perfecte beveiligingsoplossing voor uw situatie.
+				</p>
+				<a href="#contact" class="cta-btn">
+					<span>Vrijblijvend Adviesgesprek</span>
+					<svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+						<path d="M5 12H19M19 12L12 5M19 12L12 19" stroke="currentColor" stroke-width="2"/>
+					</svg>
+				</a>
+			</div>
+		</div>
+	</div>
+</section>
+
+<style>
+	.services-grid-section {
+		padding: 100px 20px;
+		background: linear-gradient(135deg, #ffffff 0%, #f8fafb 100%);
+		position: relative;
+		overflow: hidden;
+	}
+
+	.section-container {
+		max-width: 1400px;
+		margin: 0 auto;
+	}
+
+	.section-header {
+		text-align: center;
+		margin-bottom: 80px;
+	}
+
+	.section-badge {
+		display: inline-flex;
+		align-items: center;
+		background: rgba(37, 193, 206, 0.1);
+		border: 1px solid rgba(37, 193, 206, 0.2);
+		border-radius: 50px;
+		padding: 8px 20px;
+		margin-bottom: 24px;
+		font-weight: 600;
+		font-size: 14px;
+		color: #25c1ce;
+		backdrop-filter: blur(10px);
+	}
+
+	.section-title {
+		font-size: clamp(2.5rem, 4vw, 3.5rem);
+		font-weight: 900;
+		color: #2c3e50;
+		margin-bottom: 16px;
+		letter-spacing: -1px;
+		line-height: 1.1;
+	}
+
+	.highlight {
+		background: linear-gradient(135deg, #25c1ce 0%, #20b3bc 100%);
+		-webkit-background-clip: text;
+		-webkit-text-fill-color: transparent;
+		background-clip: text;
+	}
+
+	.section-description {
+		font-size: 1.2rem;
+		color: #64748b;
+		max-width: 700px;
+		margin: 0 auto;
+		line-height: 1.6;
+	}
+
+	.services-grid {
+		display: grid;
+		grid-template-columns: repeat(auto-fit, minmax(380px, 1fr));
+		gap: 40px;
+		margin-bottom: 100px;
+	}
+
+	.service-card {
+		position: relative;
+		background: white;
+		border-radius: 25px;
+		overflow: hidden;
+		box-shadow: 0 15px 40px rgba(0, 0, 0, 0.08);
+		transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+		border: 1px solid rgba(37, 193, 206, 0.1);
+		min-height: 500px;
+		display: flex;
+		flex-direction: column;
+		transform-style: preserve-3d;
+		perspective: 1000px;
+		will-change: transform;
+	}
+
+	.service-card:hover {
+		box-shadow: 0 30px 80px rgba(37, 193, 206, 0.2);
+		border-color: #25c1ce;
+	}
+
+	.service-card::after {
+		content: '';
+		position: absolute;
+		top: 0;
+		left: 0;
+		right: 0;
+		bottom: 0;
+		background: radial-gradient(circle at var(--mouse-x, 50%) var(--mouse-y, 50%), rgba(37, 193, 206, 0.05) 0%, transparent 50%);
+		opacity: 0;
+		transition: opacity 0.3s ease;
+		pointer-events: none;
+	}
+
+	.service-card:hover::after {
+		opacity: 1;
+	}
+
+	.card-background {
+		position: absolute;
+		top: 0;
+		left: 0;
+		right: 0;
+		bottom: 0;
+		opacity: 0;
+		transition: opacity 0.3s ease;
+	}
+
+	.service-card:hover .card-background {
+		opacity: 1;
+	}
+
+	.card-pattern {
+		width: 100%;
+		height: 100%;
+		background-image:
+			radial-gradient(circle at 20% 80%, rgba(37, 193, 206, 0.05) 0%, transparent 50%),
+			radial-gradient(circle at 80% 20%, rgba(37, 193, 206, 0.05) 0%, transparent 50%);
+	}
+
+	.card-content {
+		position: relative;
+		padding: 50px 40px;
+		display: flex;
+		flex-direction: column;
+		flex: 1;
+	}
+
+	.service-icon {
+		width: 120px;
+		height: 120px;
+		background: rgba(37, 193, 206, 0.08);
+		border-radius: 25px;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		margin-bottom: 30px;
+		transition: all 0.4s ease;
+		position: relative;
+		transform-style: preserve-3d;
+		will-change: transform;
+	}
+
+	.service-card:hover .service-icon {
+		background: linear-gradient(135deg, #25c1ce 0%, #20b3bc 100%);
+		transform: scale(1.1) rotate(5deg) translateZ(20px);
+	}
+
+	.service-icon svg {
+		transition: all 0.4s ease;
+		filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.1));
+	}
+
+	.service-card:hover .service-icon svg {
+		stroke: white;
+		filter: drop-shadow(0 8px 16px rgba(37, 193, 206, 0.3));
+	}
+
+	.service-info {
+		flex: 1;
+		display: flex;
+		flex-direction: column;
+	}
+
+	.service-title {
+		font-size: 1.8rem;
+		font-weight: 800;
+		color: #2c3e50;
+		margin-bottom: 16px;
+		letter-spacing: -0.5px;
+	}
+
+	.service-description {
+		font-size: 1.1rem;
+		line-height: 1.6;
+		color: #64748b;
+		margin-bottom: 30px;
+		flex: 1;
+	}
+
+	.service-features {
+		display: flex;
+		flex-direction: column;
+		gap: 16px;
+		margin-bottom: 30px;
+	}
+
+	.feature {
+		display: flex;
+		align-items: center;
+		gap: 12px;
+		padding: 12px 16px;
+		background: rgba(37, 193, 206, 0.03);
+		border-radius: 12px;
+		border: 1px solid rgba(37, 193, 206, 0.1);
+		transition: all 0.3s ease;
+	}
+
+	.feature:hover {
+		background: rgba(37, 193, 206, 0.08);
+		border-color: rgba(37, 193, 206, 0.2);
+		transform: translateX(5px);
+	}
+
+	.feature span {
+		font-weight: 600;
+		color: #2c3e50;
+		font-size: 0.95rem;
+	}
+
+	.service-btn {
+		display: inline-flex;
+		align-items: center;
+		justify-content: center;
+		gap: 12px;
+		padding: 16px 32px;
+		background: linear-gradient(135deg, #25c1ce 0%, #20b3bc 100%);
+		color: white;
+		border: none;
+		border-radius: 15px;
+		font-weight: 700;
+		font-size: 1rem;
+		cursor: pointer;
+		transition: all 0.3s ease;
+		box-shadow: 0 10px 30px rgba(37, 193, 206, 0.3);
+		margin-top: auto;
+	}
+
+	.service-btn:hover {
+		transform: translateY(-3px);
+		box-shadow: 0 15px 40px rgba(37, 193, 206, 0.4);
+	}
+
+	.cta-section {
+		background: linear-gradient(135deg, #25c1ce 0%, #20b3bc 100%);
+		border-radius: 30px;
+		padding: 80px 60px;
+		text-align: center;
+		position: relative;
+		overflow: hidden;
+	}
+
+	.cta-section::before {
+		content: '';
+		position: absolute;
+		top: 0;
+		left: -100%;
+		width: 100%;
+		height: 100%;
+		background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.1), transparent);
+		animation: shimmer 4s ease-in-out infinite;
+	}
+
+	@keyframes shimmer {
+		0% { left: -100%; }
+		100% { left: 100%; }
+	}
+
+	.cta-content {
+		position: relative;
+		z-index: 1;
+	}
+
+	.cta-badge {
+		display: inline-flex;
+		align-items: center;
+		background: rgba(255, 255, 255, 0.2);
+		border-radius: 50px;
+		padding: 8px 20px;
+		margin-bottom: 24px;
+		font-weight: 600;
+		font-size: 14px;
+		color: white;
+		backdrop-filter: blur(10px);
+	}
+
+	.cta-title {
+		font-size: 2.5rem;
+		font-weight: 900;
+		color: white;
+		margin-bottom: 16px;
+		letter-spacing: -1px;
+	}
+
+	.cta-description {
+		font-size: 1.2rem;
+		color: rgba(255, 255, 255, 0.9);
+		margin-bottom: 40px;
+		max-width: 600px;
+		margin-left: auto;
+		margin-right: auto;
+		line-height: 1.6;
+	}
+
+	.cta-btn {
+		display: inline-flex;
+		align-items: center;
+		gap: 12px;
+		padding: 18px 36px;
+		background: white;
+		color: #25c1ce;
+		text-decoration: none;
+		border-radius: 15px;
+		font-weight: 700;
+		font-size: 1.1rem;
+		transition: all 0.3s ease;
+		box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+	}
+
+	.cta-btn:hover {
+		transform: translateY(-3px);
+		box-shadow: 0 15px 40px rgba(0, 0, 0, 0.3);
+	}
+
+	/* Responsive design */
+	@media (max-width: 1024px) {
+		.services-grid {
+			grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+			gap: 30px;
+		}
+	}
+
+	@media (max-width: 768px) {
+		.services-grid-section {
+			padding: 60px 20px;
+		}
+
+		.services-grid {
+			grid-template-columns: 1fr;
+			gap: 25px;
+		}
+
+		.card-content {
+			padding: 35px 25px;
+		}
+
+		.service-icon {
+			width: 100px;
+			height: 100px;
+		}
+
+		.service-title {
+			font-size: 1.5rem;
+		}
+
+		.cta-section {
+			padding: 50px 25px;
+		}
+
+		.cta-title {
+			font-size: 2rem;
+		}
+	}
+
+	@media (max-width: 480px) {
+		.service-card {
+			min-height: 450px;
+		}
+
+		.card-content {
+			padding: 25px 20px;
+		}
+
+		.service-description {
+			font-size: 1rem;
+		}
+
+		.feature {
+			padding: 10px 12px;
+		}
+
+		.feature span {
+			font-size: 0.9rem;
+		}
+	}
+</style>
+
+<script>
+	document.addEventListener('DOMContentLoaded', () => {
+		// Service modal functionality
+		window.showServiceDetails = function(serviceType) {
+			// Create modal or scroll to contact
+			console.log(`Showing details for: ${serviceType}`);
+
+			// For now, scroll to contact form
+			const contactForm = document.getElementById('ModernContactForm') ||
+								document.querySelector('.modern-contact') ||
+								document.getElementById('contact');
+
+			if (contactForm) {
+				contactForm.scrollIntoView({ behavior: 'smooth', block: 'start' });
+
+				// Optionally pre-fill the form with service info
+				setTimeout(() => {
+					const subjectSelect = document.querySelector('#subject');
+					if (subjectSelect) {
+						const serviceMapping = {
+							'camerabewaking': 'camera',
+							'alarminstallaties': 'inbraak',
+							'toegangscontrole': 'toegang',
+							'onderhoud': 'service',
+							'smart-security': 'advies',
+							'consultancy': 'advies'
+						};
+
+						const mappedService = serviceMapping[serviceType];
+						if (mappedService) {
+							subjectSelect.value = mappedService;
+						}
+					}
+				}, 500);
+			}
+		};
+
+		// Add interactive hover effects with smooth mouse follow
+		const serviceCards = document.querySelectorAll('.service-card');
+
+		// Store card positions and use RAF for smooth performance
+		const cardStates = new Map();
+
+		serviceCards.forEach((card, index) => {
+			let isHovered = false;
+			let currentX = 0;
+			let currentY = 0;
+			let targetX = 0;
+			let targetY = 0;
+			let animationId = null;
+
+			// Initialize card state
+			cardStates.set(card, {
+				isHovered,
+				currentX,
+				currentY,
+				targetX,
+				targetY,
+				animationId
+			});
+
+			// Mouse enter
+			card.addEventListener('mouseenter', function() {
+				isHovered = true;
+				const state = cardStates.get(this);
+				state.isHovered = true;
+
+				// Add lifting effect
+				this.style.transition = 'transform 0.3s cubic-bezier(0.4, 0, 0.2, 1)';
+				this.style.transform = 'translateY(-15px) scale(1.02)';
+
+				// Remove transition for smooth mouse follow
+				setTimeout(() => {
+					this.style.transition = 'none';
+				}, 300);
+			});
+
+			// Mouse leave
+			card.addEventListener('mouseleave', function() {
+				isHovered = false;
+				const state = cardStates.get(this);
+				state.isHovered = false;
+
+				// Add transition back to neutral position
+				this.style.transition = 'transform 0.5s cubic-bezier(0.4, 0, 0.2, 1)';
+				this.style.transform = 'translateY(0) scale(1) rotateX(0) rotateY(0)';
+
+				// Cancel any running animation
+				if (state.animationId) {
+					cancelAnimationFrame(state.animationId);
+					state.animationId = null;
+				}
+
+				// Reset position values
+				state.currentX = 0;
+				state.currentY = 0;
+				state.targetX = 0;
+				state.targetY = 0;
+			});
+
+			// Mouse move with smooth interpolation
+			card.addEventListener('mousemove', function(e) {
+				const state = cardStates.get(this);
+				if (!state.isHovered) return;
+
+				const rect = this.getBoundingClientRect();
+				const mouseX = e.clientX - rect.left;
+				const mouseY = e.clientY - rect.top;
+
+				const centerX = rect.width / 2;
+				const centerY = rect.height / 2;
+
+				// Calculate target rotation (reduced for subtlety)
+				state.targetX = ((centerX - mouseX) / rect.width) * 15; // Max 15 degrees
+				state.targetY = ((mouseY - centerY) / rect.height) * 10; // Max 10 degrees
+
+				// Smooth interpolation using requestAnimationFrame
+				if (!state.animationId) {
+					const animate = () => {
+						// Interpolate to target values
+						state.currentX += (state.targetX - state.currentX) * 0.1;
+						state.currentY += (state.targetY - state.currentY) * 0.1;
+
+						// Apply transform
+						this.style.transform = `
+							translateY(-15px)
+							scale(1.02)
+							rotateX(${state.currentY}deg)
+							rotateY(${state.currentX}deg)
+						`;
+
+						// Continue animation if still hovered and not at target
+						if (state.isHovered &&
+							(Math.abs(state.currentX - state.targetX) > 0.1 ||
+							 Math.abs(state.currentY - state.targetY) > 0.1)) {
+							state.animationId = requestAnimationFrame(animate);
+						} else {
+							state.animationId = null;
+						}
+					};
+
+					state.animationId = requestAnimationFrame(animate);
+				}
+			});
+
+			// Touch device support
+			card.addEventListener('touchmove', function(e) {
+				const touch = e.touches[0];
+				const mouseEvent = new MouseEvent('mousemove', {
+					clientX: touch.clientX,
+					clientY: touch.clientY
+				});
+				this.dispatchEvent(mouseEvent);
+			});
+
+			// Track mouse position for spotlight effect
+			card.addEventListener('mousemove', function(e) {
+				const rect = this.getBoundingClientRect();
+				const x = ((e.clientX - rect.left) / rect.width) * 100;
+				const y = ((e.clientY - rect.top) / rect.height) * 100;
+				this.style.setProperty('--mouse-x', `${x}%`);
+				this.style.setProperty('--mouse-y', `${y}%`);
+			});
+
+			card.addEventListener('mouseenter', function() {
+				this.style.setProperty('--mouse-x', '50%');
+				this.style.setProperty('--mouse-y', '50%');
+			});
+		});
+
+		// Add parallax effect for icons
+		const observer = new IntersectionObserver((entries) => {
+			entries.forEach(entry => {
+				if (entry.isIntersecting) {
+					entry.target.style.animationPlayState = 'running';
+				}
+			});
+		}, { threshold: 0.1 });
+
+		document.querySelectorAll('.service-icon').forEach(icon => {
+			observer.observe(icon);
+		});
+	});
+</script>

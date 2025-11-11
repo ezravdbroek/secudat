@@ -1,0 +1,642 @@
+---
+// ModernContactForm.astro - Modern contact form with animations
+---
+
+<section class="modern-contact">
+	<div class="contact-background">
+		<div class="contact-pattern"></div>
+		<div class="floating-icons">
+			<div class="contact-float float-1">
+				<svg width="40" height="40" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+					<path d="M4 4H20C21.1046 4 22 4.89543 22 6V18C22 19.1046 21.1046 20 20 20H4C2.89543 20 2 19.1046 2 18V6C2 4.89543 2.89543 4 4 4Z" stroke="#25c1ce" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+					<polyline points="22,6 12,13 2,6" stroke="#25c1ce" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+				</svg>
+			</div>
+			<div class="contact-float float-2">
+				<svg width="40" height="40" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+					<rect x="5" y="2" width="14" height="20" rx="2" ry="2" stroke="#25c1ce" stroke-width="2"/>
+					<path d="M12 18C13.1046 18 14 17.1046 14 16C14 14.8954 13.1046 14 12 14C10.8954 14 10 14.8954 10 16C10 17.1046 10.8954 18 12 18Z" fill="#25c1ce"/>
+					<path d="M8 6H16" stroke="#25c1ce" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+					<path d="M8 10H16" stroke="#25c1ce" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+				</svg>
+			</div>
+			<div class="contact-float float-3">
+				<svg width="40" height="40" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+					<path d="M21 15C21 15.5304 20.7893 16.0391 20.4142 16.4142C20.0391 16.7893 19.5304 17 19 17H7L3 21V5C3 4.46957 3.21071 3.96086 3.58579 3.58579C3.96086 3.21071 4.46957 3 5 3H19C19.5304 3 20.0391 3.21071 20.4142 3.58579C20.7893 3.96086 21 4.46957 21 5V15Z" stroke="#25c1ce" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+					<circle cx="12" cy="10" r="1" fill="#25c1ce"/>
+				</svg>
+			</div>
+		</div>
+	</div>
+
+	<div class="contact-container">
+		<div class="contact-header fade-in">
+			<div class="section-badge">
+				<span>
+					<svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" style="margin-right: 6px; vertical-align: middle;">
+						<path d="M22 16.92V20C22 20.5304 21.7893 21.0391 21.4142 21.4142C21.0391 21.7893 20.5304 22 20 22H4C3.46957 22 2.96086 21.7893 2.58579 21.4142C2.21071 21.0391 2 20.5304 2 20V16.92C3.65 15.64 5.58 14.69 7.62 14.18C9.66 13.67 11.81 13.41 14 13.41C16.19 13.41 18.34 13.67 20.38 14.18C22.42 14.69 24.35 15.64 26 16.92" stroke="#25c1ce" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+						<path d="M6 8C7.10457 8 8 7.10457 8 6C8 4.89543 7.10457 4 6 4C4.89543 4 4 4.89543 4 6C4 7.10457 4.89543 8 6 8Z" stroke="#25c1ce" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+						<path d="M18 8C19.1046 8 20 7.10457 20 6C20 4.89543 19.1046 4 18 4C16.8954 4 16 4.89543 16 6C16 7.10457 16.8954 8 18 8Z" stroke="#25c1ce" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+					</svg>
+					CONTACT ONS
+				</span>
+			</div>
+			<h2 class="section-title">
+				Neem <span class="highlight">Contact</span> Op
+			</h2>
+			<p class="section-description">
+				Heeft u vragen over beveiliging? Wij helpen u graag met persoonlijk advies
+			</p>
+		</div>
+
+		<div class="contact-content">
+			<div class="contact-info fade-in">
+				<div class="info-card">
+					<div class="info-icon">
+						<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+							<path d="M21 10C21 17 18 20 12 20C11.27 20 10.53 19.82 9.75 19.5L6 22V18.5C4.55 17.71 3.5 16.08 3.5 14C3.5 9 6.5 5 12 5C17.5 5 21 9 21 10Z" stroke="#25c1ce" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+							<circle cx="12" cy="12" r="1" fill="#25c1ce"/>
+						</svg>
+					</div>
+					<div class="info-content">
+						<h4>Bezoekadres</h4>
+						<p>
+							Zuidelijke Dwarsweg 110<br/>
+							8111 AD HEERENVEEN<br/>
+							Nederland
+						</p>
+					</div>
+				</div>
+
+				<div class="info-card">
+					<div class="info-icon">
+						<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+							<path d="M22 16.92V20C22 20.5304 21.7893 21.0391 21.4142 21.4142C21.0391 21.7893 20.5304 22 20 22H4C3.46957 22 2.96086 21.7893 2.58579 21.4142C2.21071 21.0391 2 20.5304 2 20V16.92C3.65 15.64 5.58 14.69 7.62 14.18C9.66 13.67 11.81 13.41 14 13.41C16.19 13.41 18.34 13.67 20.38 14.18C22.42 14.69 24.35 15.64 26 16.92" stroke="#25c1ce" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+							<path d="M6 8C7.10457 8 8 7.10457 8 6C8 4.89543 7.10457 4 6 4C4.89543 4 4 4.89543 4 6C4 7.10457 4.89543 8 6 8Z" stroke="#25c1ce" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+							<path d="M18 8C19.1046 8 20 7.10457 20 6C20 4.89543 19.1046 4 18 4C16.8954 4 16 4.89543 16 6C16 7.10457 16.8954 8 18 8Z" stroke="#25c1ce" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+						</svg>
+					</div>
+					<div class="info-content">
+						<h4>Telefoon</h4>
+						<p><a href="tel:0629505348">06 - 29 50 53 48</a></p>
+						<p><a href="tel:0513700850">0513 - 70 08 50</a></p>
+					</div>
+				</div>
+
+				<div class="info-card">
+					<div class="info-icon">
+						<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+							<path d="M4 4H20C21.1046 4 22 4.89543 22 6V18C22 19.1046 21.1046 20 20 20H4C2.89543 20 2 19.1046 2 18V6C2 4.89543 2.89543 4 4 4Z" stroke="#25c1ce" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+							<polyline points="22,6 12,13 2,6" stroke="#25c1ce" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+						</svg>
+					</div>
+					<div class="info-content">
+						<h4>E-mail</h4>
+						<p><a href="mailto:info@secudat.nl">info@secudat.nl</a></p>
+					</div>
+				</div>
+
+				<div class="info-card">
+					<div class="info-icon">
+						<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+							<circle cx="12" cy="12" r="10" stroke="#25c1ce" stroke-width="2"/>
+							<polyline points="12,6 12,12 16,14" stroke="#25c1ce" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+						</svg>
+					</div>
+					<div class="info-content">
+						<h4>Openingstijden</h4>
+						<p>Maandag - Vrijdag: 9:00 - 17:30</p>
+						<p>Zaterdag: 9:00 - 16:00</p>
+						<p>24/7 Service voor urgente gevallen</p>
+					</div>
+				</div>
+			</div>
+
+			<div class="contact-form-section fade-in">
+				<div class="form-container">
+					<h3>Direct Contact Opnemen</h3>
+					<p>Vul het formulier in en wij nemen zo spoedig mogelijk contact met u op</p>
+
+					<form class="modern-form" id="contactForm">
+						<div class="form-row">
+							<div class="form-group">
+								<label for="firstName">Voornaam *</label>
+								<input type="text" id="firstName" name="firstName" required>
+							</div>
+							<div class="form-group">
+								<label for="lastName">Achternaam *</label>
+								<input type="text" id="lastName" name="lastName" required>
+							</div>
+						</div>
+
+						<div class="form-group">
+							<label for="email">E-mailadres *</label>
+							<input type="email" id="email" name="email" required>
+						</div>
+
+						<div class="form-group">
+							<label for="phone">Telefoonnummer</label>
+							<input type="tel" id="phone" name="phone" placeholder="Optioneel">
+						</div>
+
+						<div class="form-group">
+							<label for="subject">Onderwerp *</label>
+							<select id="subject" name="subject" required>
+								<option value="">Kies een onderwerp</option>
+								<option value="advies">Gratis Adviesgesprek</option>
+								<option value="camera">Beveiligingscamera's</option>
+								<option value="toegang">Toegangscontrole</option>
+								<option value="inbraak">Inbraakpreventie</option>
+								<option value="offerte">Vrijblijvende Offerte</option>
+								<option value="service">Service & Onderhoud</option>
+								<option value="overig">Overige vraag</option>
+							</select>
+						</div>
+
+						<div class="form-group">
+							<label for="message">Bericht *</label>
+							<textarea id="message" name="message" rows="5" required placeholder="Beschrijf uw vraag of wensen..."></textarea>
+						</div>
+
+						<div class="form-options">
+							<div class="checkbox-group">
+								<input type="checkbox" id="callback" name="callback">
+								<label for="callback">Ik wil graag teruggebeld worden</label>
+							</div>
+							<div class="checkbox-group">
+								<input type="checkbox" id="newsletter" name="newsletter">
+								<label for="newsletter">Houd mij op de hoogte van nieuwe producten en aanbiedingen</label>
+							</div>
+						</div>
+
+						<button type="submit" class="submit-btn">
+							<span>Verstuur Bericht</span>
+							<svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+								<path d="M22 2L11 13M22 2L15 22L11 13L2 9L22 2Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+							</svg>
+						</button>
+					</form>
+
+					<div class="form-success" id="successMessage">
+						<div class="success-icon">
+						<svg width="60" height="60" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+							<path d="M22 11.08V12C21.9988 14.1564 21.3005 16.2547 20.0093 17.9818C18.7182 19.709 16.9033 20.9725 14.8354 21.5839C12.7674 22.1953 10.5573 22.1219 8.53447 21.3746C6.51168 20.6273 4.78465 19.2461 3.61096 17.4371C2.43727 15.628 1.87979 13.4881 2.02168 11.3363C2.16356 9.18455 2.99721 7.13631 4.39828 5.49706C5.79935 3.85781 7.69279 2.71537 9.79619 2.24013C11.8996 1.7649 14.1003 1.98232 16.07 2.86" stroke="#25c1ce" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+							<polyline points="22,4 12,14.01 9,11.01" stroke="#25c1ce" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+						</svg>
+					</div>
+						<h4>Bedankt voor uw bericht!</h4>
+						<p>Wij nemen zo snel mogelijk contact met u op.</p>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="emergency-cta fade-in">
+			<div class="cta-content">
+				<div class="emergency-badge">
+					<span>
+					<svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" style="margin-right: 6px; vertical-align: middle;">
+						<path d="M10.29 3.86L1.82 18C1.46 18.62 1.46 19.38 1.82 20L5.71 20.71C6.32 21.32 7.09 21.32 7.71 20.71L21.14 7.28C21.75 6.66 21.75 5.89 21.14 5.28L12.43 3.87C11.81 3.25 11.05 3.25 10.43 3.87L10.29 3.86Z" stroke="#25c1ce" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+						<path d="M20 14L19 13" stroke="#25c1ce" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+						<circle cx="18" cy="11" r="3" stroke="#25c1ce" stroke-width="2"/>
+					</svg>
+					DRINGEND?
+				</span>
+				</div>
+				<h3>24/7 Service voor Urgente Gevallen</h3>
+				<p>Voor spoedgevallen buiten openingstijden kunt u ons altijd bereiken</p>
+				<a href="tel:0629505348" class="emergency-button">
+					<span>Bel Nu: 06 - 29 50 53 48</span>
+					<svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+						<path d="M22 16.92V20C22 20.5304 21.7893 21.0391 21.4142 21.4142C21.0391 21.7893 20.5304 22 20 22H3C2.46957 22 1.96086 21.7893 1.58579 21.4142C1.21071 21.0391 1 20.5304 1 20V4C1 3.46957 1.21071 2.96086 1.58579 2.58579C1.96086 2.21071 2.46957 2 3 2H7M20 2V7M15 1H22V8" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+					</svg>
+				</a>
+			</div>
+		</div>
+	</div>
+</section>
+
+<style>
+	.modern-contact {
+		padding: 100px 20px;
+		background: linear-gradient(135deg, #ffffff 0%, #f8fafb 100%);
+		position: relative;
+		overflow: hidden;
+	}
+
+	.contact-background {
+		position: absolute;
+		top: 0;
+		left: 0;
+		right: 0;
+		bottom: 0;
+		z-index: 0;
+	}
+
+	.contact-pattern {
+		position: absolute;
+		width: 100%;
+		height: 100%;
+		background-image:
+			radial-gradient(circle at 20% 80%, rgba(37, 193, 206, 0.05) 0%, transparent 50%),
+			radial-gradient(circle at 80% 20%, rgba(37, 193, 206, 0.05) 0%, transparent 50%);
+	}
+
+	.floating-icons {
+		position: absolute;
+		width: 100%;
+		height: 100%;
+		pointer-events: none;
+	}
+
+	.contact-float {
+		position: absolute;
+		font-size: 3rem;
+		opacity: 0.1;
+		color: #25c1ce;
+		animation: floatContact 12s ease-in-out infinite;
+	}
+
+	.float-1 { top: 20%; left: 5%; animation-delay: 0s; }
+	.float-2 { top: 60%; left: 90%; animation-delay: 4s; }
+	.float-3 { top: 80%; left: 15%; animation-delay: 8s; }
+
+	@keyframes floatContact {
+		0%, 100% { transform: translateY(0px) rotate(0deg); opacity: 0.1; }
+		50% { transform: translateY(-25px) rotate(10deg); opacity: 0.2; }
+	}
+
+	.contact-container {
+		max-width: 1200px;
+		margin: 0 auto;
+		position: relative;
+		z-index: 1;
+	}
+
+	.contact-header {
+		text-align: center;
+		margin-bottom: 80px;
+	}
+
+	.section-badge {
+		display: inline-flex;
+		align-items: center;
+		background: rgba(37, 193, 206, 0.1);
+		border: 1px solid rgba(37, 193, 206, 0.2);
+		border-radius: 50px;
+		padding: 8px 20px;
+		margin-bottom: 24px;
+		font-weight: 600;
+		font-size: 14px;
+		color: #25c1ce;
+		backdrop-filter: blur(10px);
+	}
+
+	.section-title {
+		font-size: clamp(2rem, 4vw, 3rem);
+		font-weight: 800;
+		color: #2c3e50;
+		margin-bottom: 16px;
+		letter-spacing: -1px;
+		line-height: 1.1;
+	}
+
+	.highlight {
+		background: linear-gradient(135deg, #25c1ce 0%, #20b3bc 100%);
+		-webkit-background-clip: text;
+		-webkit-text-fill-color: transparent;
+		background-clip: text;
+	}
+
+	.section-description {
+		font-size: 1.1rem;
+		color: #64748b;
+		max-width: 600px;
+		margin: 0 auto;
+		line-height: 1.6;
+	}
+
+	.contact-content {
+		display: grid;
+		grid-template-columns: 1fr 2fr;
+		gap: 60px;
+		margin-bottom: 80px;
+	}
+
+	.contact-info {
+		display: flex;
+		flex-direction: column;
+		gap: 30px;
+	}
+
+	.info-card {
+		background: white;
+		border-radius: 20px;
+		padding: 30px;
+		display: flex;
+		align-items: flex-start;
+		gap: 20px;
+		box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+		border: 1px solid rgba(37, 193, 206, 0.1);
+		transition: all 0.3s ease;
+	}
+
+	.info-card:hover {
+		transform: translateY(-5px);
+		box-shadow: 0 20px 50px rgba(0, 0, 0, 0.15);
+	}
+
+	.info-icon {
+		font-size: 2rem;
+		min-width: 50px;
+		text-align: center;
+	}
+
+	.info-content h4 {
+		font-size: 1.1rem;
+		font-weight: 700;
+		color: #2c3e50;
+		margin-bottom: 8px;
+	}
+
+	.info-content p {
+		color: #64748b;
+		line-height: 1.6;
+		margin: 0;
+	}
+
+	.info-content a {
+		color: #25c1ce;
+		text-decoration: none;
+		font-weight: 600;
+		transition: color 0.3s ease;
+	}
+
+	.info-content a:hover {
+		color: #20b3bc;
+	}
+
+	.contact-form-section {
+		background: white;
+		border-radius: 25px;
+		padding: 50px;
+		box-shadow: 0 20px 60px rgba(0, 0, 0, 0.08);
+		border: 1px solid rgba(37, 193, 206, 0.1);
+	}
+
+	.form-container h3 {
+		font-size: 1.8rem;
+		font-weight: 700;
+		color: #2c3e50;
+		margin-bottom: 12px;
+	}
+
+	.form-container > p {
+		color: #64748b;
+		margin-bottom: 30px;
+	}
+
+	.modern-form {
+		display: flex;
+		flex-direction: column;
+		gap: 25px;
+	}
+
+	.form-row {
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+		gap: 20px;
+	}
+
+	.form-group {
+		display: flex;
+		flex-direction: column;
+	}
+
+	.form-group label {
+		font-weight: 600;
+		color: #2c3e50;
+		margin-bottom: 8px;
+		font-size: 0.95rem;
+	}
+
+	.form-group input,
+	.form-group select,
+	.form-group textarea {
+		padding: 16px 20px;
+		border: 2px solid #e2e8f0;
+		border-radius: 12px;
+		font-size: 1rem;
+		transition: all 0.3s ease;
+		background: white;
+	}
+
+	.form-group input:focus,
+	.form-group select:focus,
+	.form-group textarea:focus {
+		outline: none;
+		border-color: #25c1ce;
+		box-shadow: 0 0 0 3px rgba(37, 193, 206, 0.1);
+	}
+
+	.form-group textarea {
+		resize: vertical;
+		min-height: 120px;
+	}
+
+	.form-options {
+		display: flex;
+		flex-direction: column;
+		gap: 15px;
+	}
+
+	.checkbox-group {
+		display: flex;
+		align-items: center;
+		gap: 10px;
+	}
+
+	.checkbox-group input[type="checkbox"] {
+		width: 20px;
+		height: 20px;
+		margin: 0;
+	}
+
+	.checkbox-group label {
+		margin: 0;
+		cursor: pointer;
+		font-size: 0.95rem;
+		color: #64748b;
+	}
+
+	.submit-btn {
+		display: inline-flex;
+		align-items: center;
+		gap: 12px;
+		padding: 18px 36px;
+		background: linear-gradient(135deg, #25c1ce 0%, #20b3bc 100%);
+		color: white;
+		border: none;
+		border-radius: 12px;
+		font-weight: 700;
+		font-size: 1rem;
+		cursor: pointer;
+		transition: all 0.3s ease;
+		box-shadow: 0 10px 30px rgba(37, 193, 206, 0.3);
+		justify-content: center;
+	}
+
+	.submit-btn:hover {
+		transform: translateY(-3px);
+		box-shadow: 0 15px 40px rgba(37, 193, 206, 0.4);
+	}
+
+	.form-success {
+		display: none;
+		text-align: center;
+		padding: 40px;
+	}
+
+	.success-icon {
+		font-size: 3rem;
+		margin-bottom: 16px;
+	}
+
+	.form-success h4 {
+		font-size: 1.5rem;
+		font-weight: 700;
+		color: #25c1ce;
+		margin-bottom: 8px;
+	}
+
+	.form-success p {
+		color: #64748b;
+	}
+
+	.emergency-cta {
+		background: linear-gradient(135deg, #25c1ce 0%, #20b3bc 100%);
+		border-radius: 25px;
+		padding: 60px;
+		text-align: center;
+		color: white;
+		position: relative;
+		overflow: hidden;
+	}
+
+	.emergency-cta::before {
+		content: '';
+		position: absolute;
+		top: 0;
+		left: -100%;
+		width: 100%;
+		height: 100%;
+		background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.1), transparent);
+		animation: shimmer 4s ease-in-out infinite;
+	}
+
+	@keyframes shimmer {
+		0% { left: -100%; }
+		100% { left: 100%; }
+	}
+
+	.cta-content {
+		position: relative;
+		z-index: 1;
+	}
+
+	.emergency-badge {
+		display: inline-flex;
+		align-items: center;
+		background: rgba(255, 255, 255, 0.2);
+		border-radius: 50px;
+		padding: 8px 20px;
+		margin-bottom: 24px;
+		font-weight: 600;
+		font-size: 14px;
+		backdrop-filter: blur(10px);
+	}
+
+	.emergency-cta h3 {
+		font-size: 1.8rem;
+		font-weight: 700;
+		margin-bottom: 12px;
+	}
+
+	.emergency-cta p {
+		font-size: 1.1rem;
+		margin-bottom: 32px;
+		opacity: 0.9;
+	}
+
+	.emergency-button {
+		display: inline-flex;
+		align-items: center;
+		gap: 12px;
+		padding: 18px 36px;
+		background: white;
+		color: #25c1ce;
+		text-decoration: none;
+		border-radius: 12px;
+		font-weight: 700;
+		font-size: 1.1rem;
+		transition: all 0.3s ease;
+		box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+	}
+
+	.emergency-button:hover {
+		transform: translateY(-3px);
+		box-shadow: 0 15px 40px rgba(0, 0, 0, 0.3);
+	}
+
+	/* Responsive design */
+	@media (max-width: 1024px) {
+		.contact-content {
+			grid-template-columns: 1fr;
+			gap: 40px;
+		}
+	}
+
+	@media (max-width: 768px) {
+		.modern-contact {
+			padding: 60px 20px;
+		}
+
+		.form-row {
+			grid-template-columns: 1fr;
+		}
+
+		.contact-form-section {
+			padding: 40px 24px;
+		}
+
+		.emergency-cta {
+			padding: 40px 24px;
+		}
+
+		.floating-icons {
+			display: none;
+		}
+	}
+</style>
+
+<script>
+	document.addEventListener('DOMContentLoaded', () => {
+		const form = document.getElementById('contactForm');
+		const successMessage = document.getElementById('successMessage');
+
+		form.addEventListener('submit', (e) => {
+			e.preventDefault();
+
+			// Show success message
+			form.style.display = 'none';
+			successMessage.style.display = 'block';
+
+			// Reset form after 3 seconds
+			setTimeout(() => {
+				form.reset();
+				form.style.display = 'flex';
+				successMessage.style.display = 'none';
+			}, 5000);
+		});
+	});
+</script>

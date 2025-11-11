@@ -1,0 +1,197 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Header from '../components/Header.astro';
+import ServicesHero from '../components/ServicesHero.astro';
+import ServicesGrid from '../components/ServicesGrid.astro';
+import TeamShowcase from '../components/TeamShowcase.astro';
+import ProcessSection from '../components/ProcessSection.astro';
+import ModernContactForm from '../components/ModernContactForm.astro';
+import Footer from '../components/Footer.astro';
+---
+
+<Layout>
+	<div class="page-container">
+		<Header />
+		<main>
+			<ServicesHero />
+			<TeamShowcase />
+			<ServicesGrid />
+			<ProcessSection />
+			<ModernContactForm />
+		</main>
+		<Footer />
+	</div>
+</Layout>
+
+<style>
+	.page-container {
+		min-height: 100vh;
+		overflow-x: hidden;
+		background: #ffffff;
+	}
+
+	main {
+		padding-top: 80px; /* Space for fixed header */
+	}
+
+	/* Enhanced scroll animations */
+	.fade-in {
+		opacity: 0;
+		transform: translateY(30px);
+		transition: all 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+	}
+
+	.fade-in.visible {
+		opacity: 1;
+		transform: translateY(0);
+	}
+
+	.slide-in-left {
+		opacity: 0;
+		transform: translateX(-60px);
+		transition: all 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+	}
+
+	.slide-in-left.visible {
+		opacity: 1;
+		transform: translateX(0);
+	}
+
+	.slide-in-right {
+		opacity: 0;
+		transform: translateX(60px);
+		transition: all 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+	}
+
+	.slide-in-right.visible {
+		opacity: 1;
+		transform: translateX(0);
+	}
+
+	.scale-in {
+		opacity: 0;
+		transform: scale(0.9);
+		transition: all 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+	}
+
+	.scale-in.visible {
+		opacity: 1;
+		transform: scale(1);
+	}
+
+	/* Enhanced stagger animations for multiple elements */
+	.stagger-item {
+		opacity: 0;
+		transform: translateY(30px);
+		transition: all 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+	}
+
+	.stagger-item.visible {
+		opacity: 1;
+		transform: translateY(0);
+	}
+
+	.stagger-container .stagger-item:nth-child(1) { transition-delay: 0.1s; }
+	.stagger-container .stagger-item:nth-child(2) { transition-delay: 0.2s; }
+	.stagger-container .stagger-item:nth-child(3) { transition-delay: 0.3s; }
+	.stagger-container .stagger-item:nth-child(4) { transition-delay: 0.4s; }
+	.stagger-container .stagger-item:nth-child(5) { transition-delay: 0.5s; }
+	.stagger-container .stagger-item:nth-child(6) { transition-delay: 0.6s; }
+
+	/* Smooth scroll behavior */
+	html {
+		scroll-behavior: smooth;
+	}
+
+	/* Loading animation for page */
+	.page-container {
+		animation: pageLoad 0.8s ease-out;
+	}
+
+	@keyframes pageLoad {
+		from {
+			opacity: 0;
+			transform: translateY(20px);
+		}
+		to {
+			opacity: 1;
+			transform: translateY(0);
+		}
+	}
+</style>
+
+<script>
+	document.addEventListener('DOMContentLoaded', () => {
+		// Enhanced intersection observer for animations
+		const observerOptions = {
+			threshold: 0.1,
+			rootMargin: '0px 0px -50px 0px'
+		};
+
+		const observer = new IntersectionObserver((entries) => {
+			entries.forEach(entry => {
+				if (entry.isIntersecting) {
+					entry.target.classList.add('visible');
+				}
+			});
+		}, observerOptions);
+
+		// Observe all animated elements
+		document.querySelectorAll('.fade-in, .slide-in-left, .slide-in-right, .scale-in, .stagger-item').forEach(el => {
+			observer.observe(el);
+		});
+
+		// Enhanced parallax effect for floating elements
+		const handleScroll = () => {
+			const scrolled = window.pageYOffset;
+			const parallaxElements = document.querySelectorAll('.security-icon, .tech-card, .service-feature');
+
+			parallaxElements.forEach((element, index) => {
+				const speed = 0.2 + (index * 0.05);
+				const yPos = -(scrolled * speed);
+				element.style.transform = `translateY(${yPos}px)`;
+			});
+		};
+
+		// Throttle scroll events for better performance
+		let ticking = false;
+		const requestTick = () => {
+			if (!ticking) {
+				window.requestAnimationFrame(handleScroll);
+				ticking = true;
+				setTimeout(() => { ticking = false; }, 16);
+			}
+		};
+
+		window.addEventListener('scroll', requestTick, { passive: true });
+
+		// Smooth reveal animations on scroll
+		let lastScroll = 0;
+		const handleReveal = () => {
+			const currentScroll = window.pageYOffset;
+			const scrollDirection = currentScroll > lastScroll ? 'down' : 'up';
+			lastScroll = currentScroll;
+
+			// Add/remove reveal classes based on scroll direction
+			document.querySelectorAll('.stagger-item').forEach(item => {
+				const rect = item.getBoundingClientRect();
+				const isVisible = rect.top < window.innerHeight * 0.8 && rect.bottom > 0;
+
+				if (isVisible && !item.classList.contains('visible')) {
+					setTimeout(() => {
+						item.classList.add('visible');
+					}, Math.random() * 200);
+				}
+			});
+		};
+
+		// Combine scroll handlers
+		const optimizedScrollHandler = () => {
+			handleScroll();
+			handleReveal();
+			requestTick();
+		};
+
+		window.addEventListener('scroll', optimizedScrollHandler, { passive: true });
+	});
+</script>

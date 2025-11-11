@@ -1,0 +1,503 @@
+---
+// AboutHero.astro - Unique homepage-inspired hero section
+---
+
+<section class="about-hero">
+	<div class="hero-background">
+		<div class="gradient-mesh"></div>
+		<div class="floating-cards">
+			<div class="floating-card card-1">
+				<span class="card-year">2014</span>
+			</div>
+			<div class="floating-card card-2">
+				<span class="card-number">500+</span>
+			</div>
+			<div class="floating-card card-3">
+				<span class="card-rating">⭐⭐⭐⭐⭐</span>
+			</div>
+		</div>
+	</div>
+
+	<div class="hero-container">
+		<div class="hero-content">
+			<div class="hero-left slide-in-left">
+				<div class="trust-badge">
+					<span class="badge-icon">🛡️</span>
+					<span class="badge-text">2014 - Heden</span>
+				</div>
+
+				<h1 class="hero-title">
+					<span class="title-line">Expert in</span>
+					<span class="highlight">Beveiliging</span>
+					<span class="title-line">sinds 10 jaar</span>
+				</h1>
+
+				<p class="hero-description">
+					Secudat is uw betrouwbare partner voor professionele beveiligingsoplossingen.
+					Wij combineren geavanceerde technologie met persoonlijke service voor maximale veiligheid.
+				</p>
+
+				<div class="hero-highlights">
+					<div class="highlight-item stagger-item">
+						<div class="highlight-icon">🏆</div>
+						<div class="highlight-text">
+							<span class="highlight-title">500+ Projecten</span>
+							<span class="highlight-subtitle">Voltooid</span>
+						</div>
+					</div>
+
+					<div class="highlight-item stagger-item">
+						<div class="highlight-icon">⏰</div>
+						<div class="highlight-text">
+							<span class="highlight-title">24/7 Service</span>
+							<span class="highlight-subtitle">Altijd bereikbaar</span>
+						</div>
+					</div>
+
+					<div class="highlight-item stagger-item">
+						<div class="highlight-icon">💯</div>
+						<div class="highlight-text">
+							<span class="highlight-title">100%</span>
+							<span class="highlight-subtitle">Garantie</span>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div class="hero-right slide-in-right">
+				<div class="hero-visual">
+					<div class="visual-container">
+						<div class="main-visual">
+							<div class="visual-layer layer-1"></div>
+							<div class="visual-layer layer-2"></div>
+							<div class="visual-content">
+								<div class="trust-seal">
+									<div class="seal-icon">🔒</div>
+									<span class="seal-text">Gecertificeerd</span>
+								</div>
+							</div>
+						</div>
+
+						<div class="floating-stats">
+							<div class="stat-box stat-1">
+								<span class="stat-icon">📊</span>
+								<span class="stat-number">98%</span>
+								<span class="stat-label">Tevredenheid</span>
+							</div>
+
+							<div class="stat-box stat-2">
+								<span class="stat-icon">🚀</span>
+								<span class="stat-number">15+</span>
+								<span class="stat-label">Jaar Ervaring</span>
+							</div>
+
+							<div class="stat-box stat-3">
+								<span class="stat-icon">🏠</span>
+								<span class="stat-number">1000+</span>
+								<span class="stat-label">Installaties</span>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+</section>
+
+<style>
+	.about-hero {
+		min-height: 100vh;
+		position: relative;
+		display: flex;
+		align-items: center;
+		overflow: hidden;
+		background: linear-gradient(135deg, #f8fafb 0%, #e8f4f5 100%);
+	}
+
+	.hero-background {
+		position: absolute;
+		top: 0;
+		left: 0;
+		right: 0;
+		bottom: 0;
+		z-index: 0;
+	}
+
+	.gradient-mesh {
+		position: absolute;
+		top: 0;
+		left: 0;
+		right: 0;
+		bottom: 0;
+		background:
+			radial-gradient(circle at 20% 80%, rgba(37, 193, 206, 0.1) 0%, transparent 50%),
+			radial-gradient(circle at 80% 20%, rgba(37, 193, 206, 0.1) 0%, transparent 50%),
+			radial-gradient(circle at 40% 40%, rgba(37, 193, 206, 0.05) 0%, transparent 50%);
+		animation: meshFloat 20s ease-in-out infinite;
+	}
+
+	@keyframes meshFloat {
+		0%, 100% { opacity: 0.5; }
+		50% { opacity: 0.8; }
+	}
+
+	.floating-cards {
+		position: absolute;
+		width: 100%;
+		height: 100%;
+		pointer-events: none;
+	}
+
+	.floating-card {
+		position: absolute;
+		background: white;
+		border-radius: 16px;
+		padding: 12px 20px;
+		box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+		border: 1px solid rgba(37, 193, 206, 0.2);
+		backdrop-filter: blur(10px);
+		font-weight: 700;
+		color: #25c1ce;
+		animation: cardFloat 8s ease-in-out infinite;
+	}
+
+	.card-1 {
+		top: 15%;
+		left: 10%;
+		animation-delay: 0s;
+	}
+
+	.card-2 {
+		top: 65%;
+		right: 12%;
+		animation-delay: 2.5s;
+	}
+
+	.card-3 {
+		top: 35%;
+		left: 88%;
+		animation-delay: 5s;
+	}
+
+	@keyframes cardFloat {
+		0%, 100% {
+			transform: translateY(0px) rotate(-2deg);
+			opacity: 0.6;
+		}
+		50% {
+			transform: translateY(-20px) rotate(2deg);
+			opacity: 0.9;
+		}
+	}
+
+	.hero-container {
+		max-width: 1400px;
+		margin: 0 auto;
+		padding: 0 20px;
+		position: relative;
+		z-index: 10;
+	}
+
+	.hero-content {
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+		gap: 100px;
+		align-items: center;
+	}
+
+	.hero-left {
+		display: flex;
+		flex-direction: column;
+	}
+
+	.trust-badge {
+		display: inline-flex;
+		align-items: center;
+		gap: 10px;
+		background: linear-gradient(135deg, #25c1ce 0%, #20b3bc 100%);
+		color: white;
+		padding: 12px 24px;
+		border-radius: 50px;
+		font-weight: 600;
+		font-size: 15px;
+		margin-bottom: 32px;
+		box-shadow: 0 10px 30px rgba(37, 193, 206, 0.3);
+		animation: pulse 2s ease-in-out infinite;
+	}
+
+	@keyframes pulse {
+		0%, 100% { transform: scale(1); }
+		50% { transform: scale(1.05); }
+	}
+
+	.badge-icon {
+		font-size: 1.2rem;
+	}
+
+	.hero-title {
+		font-size: clamp(2.5rem, 5vw, 4rem);
+		font-weight: 900;
+		line-height: 1.1;
+		color: #2c3e50;
+		margin-bottom: 24px;
+		letter-spacing: -2px;
+	}
+
+	.title-line {
+		display: block;
+	}
+
+	.highlight {
+		background: linear-gradient(135deg, #25c1ce 0%, #20b3bc 100%);
+		-webkit-background-clip: text;
+		-webkit-text-fill-color: transparent;
+		background-clip: text;
+	}
+
+	.hero-description {
+		font-size: 1.3rem;
+		line-height: 1.7;
+		color: #64748b;
+		margin-bottom: 48px;
+		max-width: 550px;
+		font-weight: 400;
+	}
+
+	.hero-highlights {
+		display: flex;
+		flex-direction: column;
+		gap: 20px;
+	}
+
+	.highlight-item {
+		display: flex;
+		align-items: center;
+		gap: 20px;
+		padding: 24px 28px;
+		background: white;
+		border-radius: 20px;
+		box-shadow: 0 6px 20px rgba(0, 0, 0, 0.06);
+		border: 1px solid rgba(37, 193, 206, 0.1);
+		transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+	}
+
+	.highlight-item:hover {
+		transform: translateY(-3px);
+		box-shadow: 0 12px 35px rgba(37, 193, 206, 0.15);
+	}
+
+	.highlight-icon {
+		font-size: 2rem;
+		min-width: 50px;
+		text-align: center;
+	}
+
+	.highlight-text {
+		flex: 1;
+	}
+
+	.highlight-title {
+		font-size: 1.2rem;
+		font-weight: 700;
+		color: #2c3e50;
+		margin-bottom: 2px;
+		display: block;
+	}
+
+	.highlight-subtitle {
+		font-size: 0.9rem;
+		color: #64748b;
+	}
+
+	.hero-right {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+	}
+
+	.hero-visual {
+		position: relative;
+		width: 100%;
+		max-width: 500px;
+	}
+
+	.visual-container {
+		position: relative;
+		width: 100%;
+		aspect-ratio: 1;
+	}
+
+	.main-visual {
+		width: 100%;
+		height: 100%;
+		background: white;
+		border-radius: 30px;
+		box-shadow: 0 20px 60px rgba(0, 0, 0, 0.1);
+		position: relative;
+		overflow: hidden;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+	}
+
+	.visual-layer {
+		position: absolute;
+		border-radius: 30px;
+	}
+
+	.layer-1 {
+		top: -10px;
+		left: -10px;
+		right: -10px;
+		bottom: -10px;
+		background: linear-gradient(135deg, #25c1ce 0%, #20b3bc 100%);
+		opacity: 0.1;
+		animation: layerFloat 6s ease-in-out infinite;
+	}
+
+	.layer-2 {
+		top: -20px;
+		left: -20px;
+		right: -20px;
+		bottom: -20px;
+		background: linear-gradient(135deg, #25c1ce 0%, #20b3bc 100%);
+		opacity: 0.05;
+		animation: layerFloat 8s ease-in-out infinite reverse;
+	}
+
+	@keyframes layerFloat {
+		0%, 100% { transform: translate(0, 0) scale(1); }
+		50% { transform: translate(-10px, -10px) scale(1.02); }
+	}
+
+	.visual-content {
+		z-index: 2;
+		text-align: center;
+	}
+
+	.trust-seal {
+		background: white;
+		border-radius: 20px;
+		padding: 30px;
+		box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+		border: 2px solid #25c1ce;
+	}
+
+	.seal-icon {
+		font-size: 3rem;
+		margin-bottom: 16px;
+		display: block;
+	}
+
+	.seal-text {
+		font-size: 1.2rem;
+		font-weight: 700;
+		color: #2c3e50;
+	}
+
+	.floating-stats {
+		position: absolute;
+		width: 100%;
+		height: 100%;
+		pointer-events: none;
+	}
+
+	.stat-box {
+		position: absolute;
+		background: white;
+		border-radius: 16px;
+		padding: 16px;
+		box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		gap: 8px;
+		animation: statFloat 4s ease-in-out infinite;
+	}
+
+	.stat-1 {
+		top: 10%;
+		right: -20px;
+		animation-delay: 0s;
+	}
+
+	.stat-2 {
+		bottom: 15%;
+		left: -20px;
+		animation-delay: 1.5s;
+	}
+
+	.stat-3 {
+		top: 60%;
+		right: -10px;
+		animation-delay: 3s;
+	}
+
+	@keyframes statFloat {
+		0%, 100% {
+			transform: translateY(0px) scale(1);
+			opacity: 0.7;
+		}
+		50% {
+			transform: translateY(-15px) scale(1.05);
+			opacity: 1;
+		}
+	}
+
+	.stat-icon {
+		font-size: 1.5rem;
+	}
+
+	.stat-number {
+		font-size: 1.5rem;
+		font-weight: 900;
+		color: #25c1ce;
+	}
+
+	.stat-label {
+		font-size: 0.8rem;
+		font-weight: 600;
+		color: #64748b;
+		text-transform: uppercase;
+		letter-spacing: 0.5px;
+	}
+
+	/* Responsive design */
+	@media (max-width: 1024px) {
+		.hero-content {
+			gap: 60px;
+		}
+	}
+
+	@media (max-width: 768px) {
+		.hero-content {
+			grid-template-columns: 1fr;
+			gap: 50px;
+			text-align: center;
+		}
+
+		.hero-title {
+			font-size: 2.5rem;
+		}
+
+		.hero-description {
+			margin: 0 auto 40px;
+			font-size: 1.1rem;
+		}
+
+		.floating-cards {
+			display: none;
+		}
+
+		.floating-stats {
+			display: none;
+		}
+
+		.hero-highlights {
+			align-items: center;
+		}
+
+		.main-visual {
+			max-width: 400px;
+		}
+	}
+</style>

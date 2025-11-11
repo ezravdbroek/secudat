@@ -1,0 +1,701 @@
+---
+// ContactForm.astro - Modern contact form with validation and animations
+---
+
+<section id="contact" class="contact">
+	<div class="contact-container">
+		<div class="contact-header fade-in">
+			<div class="section-badge">
+				<span>CONTACT</span>
+			</div>
+			<h2 class="section-title">
+				Neem <span class="highlight">Contact</span> met ons op
+			</h2>
+			<p class="section-description">
+				Heeft u vragen of wilt u een vrijblijvend adviesgesprek?
+				Ons team staat klaar om u te helpen met de juiste beveiligingsoplossing.
+			</p>
+		</div>
+
+		<div class="contact-content">
+			<div class="contact-info slide-in-left">
+				<div class="contact-card">
+					<div class="contact-icon">
+						<svg width="30" height="30" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+							<path d="M22 16.92V19.92C22 20.52 21.39 21 20.67 21C9.71 21 1 12.79 1 2.68C1 2.3 1.37 2 1.78 2H4.89C5.45 2 5.89 2.39 5.89 2.85C5.89 5.08 7.89 7 10 7H14C14.55 7 15 7.45 15 8V12C15 12.55 15.45 13 16 13H20C20.55 13 21 13.45 21 14V16C21 16.55 21.45 17 22 17H22C22.55 17 23 16.55 23 16C23 16.55 22.55 17 22 17H21C20.45 17 20 16.55 20 16V14H16V8C16 6.9 15.1 6 14 6H10C7.24 6 5 3.76 5 1C5 0.45 4.55 0 4 0H1C0.45 0 0 0.45 0 1C0 12.6 10.4 23 22 23C23.1 23 24 22.1 24 21V18C24 17.45 23.55 17 23 17H22C21.45 17 21 16.55 21 16V14C21 13.45 20.55 13 20 13H16C15.45 13 15 12.55 15 12V8C15 7.45 14.55 7 14 7H10C7.79 7 5.79 5.08 5.89 2.85C5.89 2.39 5.45 2 4.89 2H1.78C1.37 2 1 2.3 1 2.68C1 12.79 9.71 21 20.67 21C21.39 21 22 20.52 22 19.92V16.92C22 16.41 22.39 16 22.89 16C22.95 16 23 16.05 23 16.1C23 16.05 22.95 16 22.89 16C22.39 16 22 16.41 22 16.92Z" fill="#25c1ce"/>
+						</svg>
+					</div>
+					<div class="contact-details">
+						<h3>Telefoon</h3>
+						<p><a href="tel:+31201234567">+31 20 123 4567</a></p>
+						<span class="contact-subtitle">Maandag - Vrijdag, 9:00 - 18:00</span>
+					</div>
+				</div>
+
+				<div class="contact-card">
+					<div class="contact-icon">
+						<svg width="30" height="30" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+							<path d="M3 8L12 13L21 8V12L12 17L3 12V8Z" fill="#25c1ce"/>
+							<path d="M3 5L12 10L21 5V19C21 20.1 20.1 21 19 21H5C3.9 21 3 20.1 3 19V5Z" stroke="#25c1ce" stroke-width="2"/>
+						</svg>
+					</div>
+					<div class="contact-details">
+						<h3>E-mail</h3>
+						<p><a href="mailto:info@secudat.nl">info@secudat.nl</a></p>
+						<span class="contact-subtitle">Wij reageren binnen 24 uur</span>
+					</div>
+				</div>
+
+				<div class="contact-card">
+					<div class="contact-icon">
+						<svg width="30" height="30" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+							<path d="M21 10C21 17 12 23 12 23C12 23 3 17 3 10C3 5.58172 6.58172 2 11 2C12.4305 2 13.7714 2.40531 15 3.08334C16.2286 2.40531 17.5695 2 19 2C21.2091 2 23 3.79086 23 6V10H21Z" stroke="#25c1ce" stroke-width="2"/>
+							<path d="M12 12V12.01" stroke="#25c1ce" stroke-width="2" stroke-linecap="round"/>
+						</svg>
+					</div>
+					<div class="contact-details">
+						<h3>Bezoekadres</h3>
+						<p>Security Plaza 123<br/>1234 AB Beveiligingstad</p>
+						<span class="contact-subtitle">Op afspraak</span>
+					</div>
+				</div>
+
+				<div class="emergency-card">
+					<div class="emergency-icon">
+						<svg width="30" height="30" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+							<path d="M13 2L3 14H12L11 22L21 10H12L13 2Z" fill="#25c1ce"/>
+						</svg>
+					</div>
+					<div class="emergency-details">
+						<h3>Spoed?</h3>
+						<p><a href="tel:+31612345678">+31 6 123 45678</a></p>
+						<span class="emergency-subtitle">24/7 bereikbaar voor noodgevallen</span>
+					</div>
+				</div>
+			</div>
+
+			<div class="contact-form-container slide-in-right">
+				<div class="contact-form-wrapper">
+					<form id="contactForm" class="contact-form">
+						<div class="form-row">
+							<div class="form-group">
+								<label for="firstName">Voornaam *</label>
+								<input type="text" id="firstName" name="firstName" required>
+								<span class="form-error"></span>
+							</div>
+							<div class="form-group">
+								<label for="lastName">Achternaam *</label>
+								<input type="text" id="lastName" name="lastName" required>
+								<span class="form-error"></span>
+							</div>
+						</div>
+
+						<div class="form-group">
+							<label for="email">E-mailadres *</label>
+							<input type="email" id="email" name="email" required>
+							<span class="form-error"></span>
+						</div>
+
+						<div class="form-group">
+							<label for="phone">Telefoonnummer</label>
+							<input type="tel" id="phone" name="phone">
+							<span class="form-error"></span>
+						</div>
+
+						<div class="form-group">
+							<label for="subject">Onderwerp *</label>
+							<select id="subject" name="subject" required>
+								<option value="">Selecteer een onderwerp</option>
+								<option value="advies">Vrijblijvend advies</option>
+								<option value="offerte">Offerte aanvragen</option>
+								<option value="installatie">Installatie</option>
+								<option value="onderhoud">Onderhoud</option>
+								<option value="support">Technische support</option>
+								<option value="anders">Anders</option>
+							</select>
+							<span class="form-error"></span>
+						</div>
+
+						<div class="form-group">
+							<label for="message">Bericht *</label>
+							<textarea id="message" name="message" rows="5" required placeholder="Beschrijf uw vraag of wens..."></textarea>
+							<span class="form-error"></span>
+						</div>
+
+						<div class="form-checkbox">
+							<input type="checkbox" id="privacy" name="privacy" required>
+							<label for="privacy">
+								Ik ga akkoord met de <a href="/privacy">privacyvoorwaarden</a> en geef toestemming om contact met mij op te nemen.
+							</label>
+							<span class="form-error"></span>
+						</div>
+
+						<div class="form-actions">
+							<button type="submit" class="submit-btn">
+								<span>Verstuur Bericht</span>
+								<svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+									<path d="M5 12H19M19 12L12 5M19 12L12 19" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+								</svg>
+							</button>
+						</div>
+
+						<div id="formMessage" class="form-message"></div>
+					</form>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+
+<style>
+	.contact {
+		padding: 100px 20px;
+		background: white;
+		position: relative;
+	}
+
+	.contact::before {
+		content: '';
+		position: absolute;
+		top: 0;
+		left: 0;
+		right: 0;
+		height: 1px;
+		background: linear-gradient(90deg, transparent, #25c1ce, transparent);
+		opacity: 0.3;
+	}
+
+	.contact-container {
+		max-width: 1200px;
+		margin: 0 auto;
+	}
+
+	.contact-header {
+		text-align: center;
+		margin-bottom: 80px;
+	}
+
+	.section-badge {
+		display: inline-flex;
+		align-items: center;
+		justify-content: center;
+		background: rgba(37, 193, 206, 0.1);
+		border: 1px solid rgba(37, 193, 206, 0.2);
+		border-radius: 50px;
+		padding: 8px 20px;
+		margin-bottom: 24px;
+	}
+
+	.section-badge span {
+		font-size: 14px;
+		font-weight: 600;
+		color: #25c1ce;
+		letter-spacing: 1px;
+	}
+
+	.section-title {
+		font-size: clamp(2rem, 4vw, 3rem);
+		font-weight: 800;
+		color: #2c3e50;
+		margin-bottom: 24px;
+		line-height: 1.2;
+	}
+
+	.highlight {
+		background: linear-gradient(135deg, #25c1ce 0%, #20b3bc 100%);
+		-webkit-background-clip: text;
+		-webkit-text-fill-color: transparent;
+		background-clip: text;
+	}
+
+	.section-description {
+		font-size: 18px;
+		line-height: 1.6;
+		color: #64748b;
+		max-width: 600px;
+		margin: 0 auto;
+	}
+
+	.contact-content {
+		display: grid;
+		grid-template-columns: 1fr 1.5fr;
+		gap: 80px;
+		align-items: start;
+	}
+
+	/* Contact Info Cards */
+	.contact-info {
+		display: flex;
+		flex-direction: column;
+		gap: 24px;
+	}
+
+	.contact-card {
+		display: flex;
+		align-items: flex-start;
+		gap: 20px;
+		padding: 24px;
+		background: rgba(37, 193, 206, 0.05);
+		border: 1px solid rgba(37, 193, 206, 0.1);
+		border-radius: 16px;
+		transition: all 0.3s ease;
+	}
+
+	.contact-card:hover {
+		background: rgba(37, 193, 206, 0.1);
+		transform: translateY(-2px);
+	}
+
+	.contact-icon {
+		width: 60px;
+		height: 60px;
+		background: white;
+		border-radius: 12px;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		flex-shrink: 0;
+		box-shadow: 0 4px 20px rgba(37, 193, 206, 0.1);
+	}
+
+	.contact-details h3 {
+		font-size: 18px;
+		font-weight: 700;
+		color: #2c3e50;
+		margin-bottom: 4px;
+	}
+
+	.contact-details p {
+		font-size: 16px;
+		font-weight: 600;
+		color: #25c1ce;
+		margin-bottom: 4px;
+	}
+
+	.contact-details a {
+		color: #25c1ce;
+		text-decoration: none;
+		transition: color 0.3s ease;
+	}
+
+	.contact-details a:hover {
+		color: #20b3bc;
+	}
+
+	.contact-subtitle {
+		font-size: 14px;
+		color: #64748b;
+	}
+
+	/* Emergency Card */
+	.emergency-card {
+		display: flex;
+		align-items: flex-start;
+		gap: 20px;
+		padding: 24px;
+		background: linear-gradient(135deg, #ef4444 0%, #dc2626 100%);
+		border-radius: 16px;
+		color: white;
+		margin-top: 16px;
+	}
+
+	.emergency-icon {
+		width: 60px;
+		height: 60px;
+		background: rgba(255, 255, 255, 0.2);
+		border-radius: 12px;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		flex-shrink: 0;
+	}
+
+	.emergency-icon svg {
+		stroke: white;
+		fill: white;
+	}
+
+	.emergency-details h3 {
+		font-size: 18px;
+		font-weight: 700;
+		margin-bottom: 4px;
+	}
+
+	.emergency-details p {
+		font-size: 16px;
+		font-weight: 600;
+		margin-bottom: 4px;
+	}
+
+	.emergency-details a {
+		color: white;
+		text-decoration: none;
+		transition: opacity 0.3s ease;
+	}
+
+	.emergency-details a:hover {
+		opacity: 0.8;
+	}
+
+	.emergency-subtitle {
+		font-size: 14px;
+		opacity: 0.9;
+	}
+
+	/* Contact Form */
+	.contact-form-container {
+		position: relative;
+	}
+
+	.contact-form-wrapper {
+		background: white;
+		border-radius: 20px;
+		padding: 40px;
+		box-shadow: 0 20px 60px rgba(0, 0, 0, 0.08);
+		border: 1px solid rgba(37, 193, 206, 0.1);
+	}
+
+	.contact-form {
+		display: flex;
+		flex-direction: column;
+		gap: 24px;
+	}
+
+	.form-row {
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+		gap: 24px;
+	}
+
+	.form-group {
+		display: flex;
+		flex-direction: column;
+		position: relative;
+	}
+
+	.form-group label {
+		font-size: 14px;
+		font-weight: 600;
+		color: #2c3e50;
+		margin-bottom: 8px;
+	}
+
+	.form-group input,
+	.form-group select,
+	.form-group textarea {
+		padding: 12px 16px;
+		border: 2px solid #e2e8f0;
+		border-radius: 10px;
+		font-size: 16px;
+		transition: all 0.3s ease;
+		background: white;
+	}
+
+	.form-group input:focus,
+	.form-group select:focus,
+	.form-group textarea:focus {
+		outline: none;
+		border-color: #25c1ce;
+		box-shadow: 0 0 0 3px rgba(37, 193, 206, 0.1);
+	}
+
+	.form-group input.error,
+	.form-group select.error,
+	.form-group textarea.error {
+		border-color: #ef4444;
+	}
+
+	.form-error {
+		font-size: 12px;
+		color: #ef4444;
+		margin-top: 4px;
+		min-height: 16px;
+	}
+
+	.form-checkbox {
+		display: flex;
+		align-items: flex-start;
+		gap: 12px;
+	}
+
+	.form-checkbox input[type="checkbox"] {
+		width: 20px;
+		height: 20px;
+		margin: 0;
+		accent-color: #25c1ce;
+	}
+
+	.form-checkbox label {
+		font-size: 14px;
+		color: #64748b;
+		line-height: 1.5;
+		margin: 0;
+	}
+
+	.form-checkbox a {
+		color: #25c1ce;
+		text-decoration: none;
+		font-weight: 600;
+	}
+
+	.form-checkbox a:hover {
+		text-decoration: underline;
+	}
+
+	.form-actions {
+		display: flex;
+		justify-content: flex-end;
+	}
+
+	.submit-btn {
+		display: inline-flex;
+		align-items: center;
+		gap: 12px;
+		padding: 16px 32px;
+		background: linear-gradient(135deg, #25c1ce 0%, #20b3bc 100%);
+		color: white;
+		border: none;
+		border-radius: 12px;
+		font-weight: 700;
+		font-size: 16px;
+		cursor: pointer;
+		transition: all 0.3s ease;
+		box-shadow: 0 10px 30px rgba(37, 193, 206, 0.3);
+		position: relative;
+		overflow: hidden;
+	}
+
+	.submit-btn:hover {
+		transform: translateY(-2px);
+		box-shadow: 0 15px 40px rgba(37, 193, 206, 0.4);
+	}
+
+	.submit-btn:disabled {
+		opacity: 0.7;
+		cursor: not-allowed;
+		transform: none;
+	}
+
+	.submit-btn::before {
+		content: '';
+		position: absolute;
+		top: 0;
+		left: -100%;
+		width: 100%;
+		height: 100%;
+		background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+		transition: left 0.5s ease;
+	}
+
+	.submit-btn:hover::before {
+		left: 100%;
+	}
+
+	.form-message {
+		padding: 16px;
+		border-radius: 10px;
+		font-size: 14px;
+		font-weight: 600;
+		text-align: center;
+		opacity: 0;
+		transform: translateY(-10px);
+		transition: all 0.3s ease;
+	}
+
+	.form-message.success {
+		background: rgba(34, 197, 94, 0.1);
+		color: #16a34a;
+		border: 1px solid rgba(34, 197, 94, 0.2);
+		opacity: 1;
+		transform: translateY(0);
+	}
+
+	.form-message.error {
+		background: rgba(239, 68, 68, 0.1);
+		color: #dc2626;
+		border: 1px solid rgba(239, 68, 68, 0.2);
+		opacity: 1;
+		transform: translateY(0);
+	}
+
+	/* Responsive design */
+	@media (max-width: 768px) {
+		.contact {
+			padding: 60px 20px;
+		}
+
+		.contact-content {
+			grid-template-columns: 1fr;
+			gap: 50px;
+		}
+
+		.form-row {
+			grid-template-columns: 1fr;
+		}
+
+		.contact-form-wrapper {
+			padding: 30px 20px;
+		}
+
+		.section-title {
+			font-size: 2rem;
+		}
+	}
+</style>
+
+<script>
+	document.addEventListener('DOMContentLoaded', () => {
+		const form = document.getElementById('contactForm');
+		const submitBtn = form.querySelector('.submit-btn');
+		const formMessage = document.getElementById('formMessage');
+
+		// Form validation
+		const validateForm = (formData) => {
+			const errors = {};
+
+			// First name validation
+			if (!formData.firstName.trim()) {
+				errors.firstName = 'Voornaam is verplicht';
+			}
+
+			// Last name validation
+			if (!formData.lastName.trim()) {
+				errors.lastName = 'Achternaam is verplicht';
+			}
+
+			// Email validation
+			const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+			if (!formData.email.trim()) {
+				errors.email = 'E-mailadres is verplicht';
+			} else if (!emailRegex.test(formData.email)) {
+				errors.email = 'Voer een geldig e-mailadres in';
+			}
+
+			// Phone validation (optional but if provided, should be valid)
+			if (formData.phone && !/^[\d\s\-\+\(\)]+$/.test(formData.phone)) {
+				errors.phone = 'Voer een geldig telefoonnummer in';
+			}
+
+			// Subject validation
+			if (!formData.subject) {
+				errors.subject = 'Selecteer een onderwerp';
+			}
+
+			// Message validation
+			if (!formData.message.trim()) {
+				errors.message = 'Bericht is verplicht';
+			} else if (formData.message.trim().length < 10) {
+				errors.message = 'Bericht moet minimaal 10 tekens bevatten';
+			}
+
+			// Privacy validation
+			if (!formData.privacy) {
+				errors.privacy = 'U moet akkoord gaan met de privacyvoorwaarden';
+			}
+
+			return errors;
+		};
+
+		// Display form errors
+		const displayErrors = (errors) => {
+			// Clear previous errors
+			form.querySelectorAll('.form-error').forEach(error => {
+				error.textContent = '';
+			});
+			form.querySelectorAll('input, select, textarea').forEach(field => {
+				field.classList.remove('error');
+			});
+
+			// Display new errors
+			Object.keys(errors).forEach(fieldName => {
+				const field = form.querySelector(`[name="${fieldName}"]`);
+				if (field) {
+					field.classList.add('error');
+					const errorElement = field.parentElement.querySelector('.form-error');
+					if (errorElement) {
+						errorElement.textContent = errors[fieldName];
+					}
+				}
+			});
+		};
+
+		// Handle form submission
+		form.addEventListener('submit', async (e) => {
+			e.preventDefault();
+
+			// Get form data
+			const formData = new FormData(form);
+			const data = Object.fromEntries(formData.entries());
+
+			// Validate form
+			const errors = validateForm(data);
+			if (Object.keys(errors).length > 0) {
+				displayErrors(errors);
+				return;
+			}
+
+			// Clear previous errors
+			displayErrors({});
+
+			// Show loading state
+			submitBtn.disabled = true;
+			submitBtn.innerHTML = `
+				<span>Versturen...</span>
+				<svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+					<circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="2" stroke-dasharray="60" stroke-dashoffset="60">
+						<animate attributeName="stroke-dashoffset" from="60" to="0" dur="1s" repeatCount="indefinite"/>
+					</circle>
+				</svg>
+			`;
+
+			// Simulate form submission (replace with actual submission logic)
+			try {
+				await new Promise(resolve => setTimeout(resolve, 2000));
+
+				// Show success message
+				formMessage.className = 'form-message success';
+				formMessage.textContent = 'Uw bericht is succesvol verzonden! Wij nemen binnen 24 uur contact met u op.';
+
+				// Reset form
+				form.reset();
+
+				// Hide message after 5 seconds
+				setTimeout(() => {
+					formMessage.className = 'form-message';
+					formMessage.textContent = '';
+				}, 5000);
+
+			} catch (error) {
+				// Show error message
+				formMessage.className = 'form-message error';
+				formMessage.textContent = 'Er is een fout opgetreden. Probeer het opnieuw of neem telefonisch contact op.';
+
+				// Hide message after 5 seconds
+				setTimeout(() => {
+					formMessage.className = 'form-message';
+					formMessage.textContent = '';
+				}, 5000);
+			} finally {
+				// Reset button
+				submitBtn.disabled = false;
+				submitBtn.innerHTML = `
+					<span>Verstuur Bericht</span>
+					<svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+						<path d="M5 12H19M19 12L12 5M19 12L12 19" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+					</svg>
+				`;
+			}
+		});
+
+		// Clear errors on input
+		form.querySelectorAll('input, select, textarea').forEach(field => {
+			field.addEventListener('input', () => {
+				field.classList.remove('error');
+				const errorElement = field.parentElement.querySelector('.form-error');
+				if (errorElement) {
+					errorElement.textContent = '';
+				}
+			});
+		});
+	});
+</script>

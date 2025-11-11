@@ -1,0 +1,289 @@
+---
+// ClientLogos.astro - Section showing client/partner logos
+---
+
+<section class="client-logos">
+	<div class="container">
+		<div class="section-header fade-in">
+			<h2 class="section-title">Vertrouwd door leidende merken</h2>
+			<div class="divider"></div>
+			<p class="section-subtitle">Wij werken samen met de meest innovatieve bedrijven in beveiligingstechnologie</p>
+		</div>
+
+		<div class="logos-grid fade-in">
+			<div class="logo-item stagger-item">
+				<div class="logo-wrapper">
+					<img src="/images/logos/Bosch-security.png" alt="Bosch Security" class="partner-logo" />
+				</div>
+			</div>
+			<div class="logo-item stagger-item">
+				<div class="logo-wrapper">
+					<img src="/images/logos/dahua.png" alt="Dahua" class="partner-logo" />
+				</div>
+			</div>
+			<div class="logo-item stagger-item">
+				<div class="logo-wrapper">
+					<img src="/images/logos/panasonic-150x150.png" alt="Panasonic" class="partner-logo" />
+				</div>
+			</div>
+			<div class="logo-item stagger-item">
+				<div class="logo-wrapper">
+					<img src="/images/logos/hikvison.png" alt="Hikvision" class="partner-logo" />
+				</div>
+			</div>
+			<div class="logo-item stagger-item">
+				<div class="logo-wrapper">
+					<img src="/images/logos/ge.png" alt="GE Security" class="partner-logo" />
+				</div>
+			</div>
+		</div>
+
+		<div class="trust-indicators fade-in">
+			<div class="indicator">
+				<span class="number">500+</span>
+				<span class="label">Installaties</span>
+			</div>
+			<div class="indicator">
+				<span class="number">15+</span>
+				<span class="label">Jaar Ervaring</span>
+			</div>
+			<div class="indicator">
+				<span class="number">98%</span>
+				<span class="label">Tevredenheid</span>
+			</div>
+		</div>
+	</div>
+</section>
+
+<style>
+	.client-logos {
+		padding: 120px 20px;
+		background: #ffffff;
+		border-top: 1px solid #f1f5f9;
+		border-bottom: 1px solid #f1f5f9;
+	}
+
+	.container {
+		max-width: 1400px;
+		margin: 0 auto;
+	}
+
+	.section-header {
+		text-align: center;
+		margin-bottom: 80px;
+		max-width: 800px;
+		margin-left: auto;
+		margin-right: auto;
+	}
+
+	.section-title {
+		font-size: clamp(2rem, 3.5vw, 3.5rem);
+		font-weight: 200;
+		color: #1a202c;
+		margin-bottom: 24px;
+		letter-spacing: -0.02em;
+		line-height: 1.1;
+	}
+
+	.divider {
+		width: 60px;
+		height: 3px;
+		background: #25c1ce;
+		margin: 0 auto 32px;
+	}
+
+	.section-subtitle {
+		font-size: 1.1rem;
+		color: #718096;
+		line-height: 1.7;
+		font-weight: 400;
+		max-width: 600px;
+		margin: 0 auto;
+	}
+
+	.logos-grid {
+		display: grid;
+		grid-template-columns: repeat(5, 1fr);
+		gap: 3px;
+		margin-bottom: 100px;
+		background: #f8fafc;
+		border: 1px solid #e2e8f0;
+	}
+
+	.logo-item {
+		background: white;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		min-height: 140px;
+		padding: 32px;
+		transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+		position: relative;
+		overflow: hidden;
+	}
+
+	.logo-item::before {
+		content: '';
+		position: absolute;
+		top: 0;
+		left: 0;
+		right: 0;
+		bottom: 0;
+		background: #25c1ce;
+		opacity: 0;
+		transition: opacity 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+	}
+
+	.logo-item:hover::before {
+		opacity: 0.03;
+	}
+
+	.logo-item:hover {
+		transform: translateY(-2px);
+		box-shadow: 0 8px 30px rgba(0, 0, 0, 0.08);
+		z-index: 1;
+	}
+
+	.logo-wrapper {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		width: 100%;
+		height: 100%;
+		position: relative;
+		z-index: 2;
+	}
+
+	.partner-logo {
+		max-width: 100%;
+		max-height: 80px;
+		width: auto;
+		height: auto;
+		object-fit: contain;
+		filter: grayscale(100%);
+		opacity: 0.4;
+		transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+	}
+
+	.logo-item:hover .partner-logo {
+		filter: grayscale(0%);
+		opacity: 1;
+		transform: scale(1.05);
+	}
+
+	.trust-indicators {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		gap: 80px;
+		flex-wrap: wrap;
+	}
+
+	.indicator {
+		text-align: center;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		gap: 8px;
+	}
+
+	.number {
+		font-size: 3rem;
+		font-weight: 700;
+		color: #25c1ce;
+		letter-spacing: -0.02em;
+		line-height: 1;
+	}
+
+	.label {
+		font-size: 0.9rem;
+		color: #718096;
+		font-weight: 500;
+		text-transform: uppercase;
+		letter-spacing: 0.05em;
+	}
+
+	.stagger-item {
+		opacity: 0;
+		transform: translateY(20px);
+		transition: all 0.7s cubic-bezier(0.4, 0, 0.2, 1);
+	}
+
+	.stagger-item.visible {
+		opacity: 1;
+		transform: translateY(0);
+	}
+
+	.stagger-item:nth-child(1) { transition-delay: 0.1s; }
+	.stagger-item:nth-child(2) { transition-delay: 0.2s; }
+	.stagger-item:nth-child(3) { transition-delay: 0.3s; }
+	.stagger-item:nth-child(4) { transition-delay: 0.4s; }
+	.stagger-item:nth-child(5) { transition-delay: 0.5s; }
+
+	/* Responsive design */
+	@media (max-width: 1024px) {
+		.logos-grid {
+			grid-template-columns: repeat(3, 1fr);
+		}
+
+		.logo-item:nth-child(4),
+		.logo-item:nth-child(5) {
+			grid-column: span 1;
+		}
+	}
+
+	@media (max-width: 768px) {
+		.client-logos {
+			padding: 80px 20px;
+		}
+
+		.section-header {
+			margin-bottom: 60px;
+		}
+
+		.logos-grid {
+			grid-template-columns: repeat(2, 1fr);
+			gap: 2px;
+			margin-bottom: 60px;
+		}
+
+		.logo-item {
+			min-height: 120px;
+			padding: 24px;
+		}
+
+		.partner-logo {
+			max-height: 65px;
+		}
+
+		.trust-indicators {
+			gap: 40px;
+		}
+
+		.number {
+			font-size: 2.5rem;
+		}
+
+		.section-title {
+			font-size: 2.5rem;
+		}
+	}
+
+	@media (max-width: 480px) {
+		.logos-grid {
+			grid-template-columns: 1fr;
+		}
+
+		.trust-indicators {
+			gap: 30px;
+		}
+
+		.number {
+			font-size: 2rem;
+		}
+
+		.label {
+			font-size: 0.8rem;
+		}
+	}
+</style>

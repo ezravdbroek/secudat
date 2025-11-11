@@ -1,0 +1,513 @@
+---
+// CompanyTimeline.astro - Interactive company timeline with milestones
+---
+
+<section class="company-timeline">
+	<div class="timeline-container">
+		<div class="timeline-header fade-in">
+			<div class="section-badge">
+				<span>TIJDSLijn</span>
+			</div>
+			<h2 class="section-title">
+				Onze <span class="highlight">Reis</span> door de Tijd
+			</h2>
+			<p class="section-description">
+				Elke mijlpaal heeft ons gevormd tot de beveiligingsspecialist die we vandaag zijn.
+			</p>
+		</div>
+
+		<div class="timeline-content">
+			<div class="timeline-track"></div>
+
+			<div class="timeline-item stagger-item">
+				<div class="timeline-marker">
+					<div class="marker-dot"></div>
+					<div class="marker-year">2014</div>
+				</div>
+				<div class="timeline-card">
+					<div class="card-icon">
+						<svg width="40" height="40" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+							<path d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z" stroke="#25c1ce" stroke-width="2"/>
+						</svg>
+					</div>
+					<h3 class="card-title">De Start</h3>
+					<p class="card-description">
+						Secudat wordt opgericht in Beveiligingstad met een klein team van 3 gepassioneerde technici.
+					</p>
+					<div class="card-achievements">
+						<span class="achievement-tag">Eerste Klant</span>
+						<span class="achievement-tag">3 Teamleden</span>
+					</div>
+				</div>
+			</div>
+
+			<div class="timeline-item stagger-item">
+				<div class="timeline-marker">
+					<div class="marker-dot"></div>
+					<div class="marker-year">2015</div>
+				</div>
+				<div class="timeline-card">
+					<div class="card-icon">
+						<svg width="40" height="40" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+							<path d="M9 12L11 14L15 10" stroke="#25c1ce" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+							<path d="M21 12C21 16.9706 16.9706 21 12 21C7.02944 21 3 16.9706 3 12C3 7.02944 7.02944 3 12 3C16.9706 3 21 7.02944 21 12Z" stroke="#25c1ce" stroke-width="2"/>
+						</svg>
+					</div>
+					<h3 class="card-title">Eerste Certificering</h3>
+					<p class="card-description">
+						Behalen van onze eerste belangrijke certificering en uitbreiding naar 10 teamleden.
+					</p>
+					<div class="card-achievements">
+						<span class="achievement-tag">ISO Gecertificeerd</span>
+						<span class="achievement-tag">10 Teamleden</span>
+					</div>
+				</div>
+			</div>
+
+			<div class="timeline-item stagger-item">
+				<div class="timeline-marker">
+					<div class="marker-dot"></div>
+					<div class="marker-year">2017</div>
+				</div>
+				<div class="timeline-card">
+					<div class="card-icon">
+						<svg width="40" height="40" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+							<path d="M17 21V19C17 17.9391 16.5786 16.9217 15.8284 16.1716C15.0783 15.4214 14.0609 15 13 15H5C3.93913 15 2.92172 15.4214 2.17157 16.1716C1.42143 16.9217 1 17.9391 1 19V21" stroke="#25c1ce" stroke-width="2"/>
+							<circle cx="9" cy="7" r="4" stroke="#25c1ce" stroke-width="2"/>
+						</svg>
+					</div>
+					<h3 class="card-title">Team Uitbreiding</h3>
+					<p class="card-description>
+						Groei naar 25 medewerkers en opening van onze tweede vestiging in een naburige stad.
+					</p>
+					<div class="card-achievements">
+						<span class="achievement-tag">25 Medewerkers</span>
+						<span class="achievement-tag">2 Vestigingen</span>
+					</div>
+				</div>
+			</div>
+
+			<div class="timeline-item stagger-item">
+				<div class="timeline-marker">
+					<div class="marker-dot"></div>
+					<div class="marker-year">2019</div>
+				</div>
+				<div class="timeline-card">
+					<div class="card-icon">
+						<svg width="40" height="40" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+							<path d="M13 2L3 14H12L11 22L21 10H12L13 2Z" stroke="#25c1ce" stroke-width="2"/>
+						</svg>
+					</div>
+					<h3 class="card-title">Innovatie Award</h3>
+					<p class="card-description">
+						Winnen van de 'Beste Beveiligingsinnovatie' award en introductie van smart beveiliging.
+					</p>
+					<div class="card-achievements">
+						<span class="achievement-tag">Innovatie Award</span>
+						<span class="achievement-tag">Smart Security</span>
+					</div>
+				</div>
+			</div>
+
+			<div class="timeline-item stagger-item">
+				<div class="timeline-marker">
+					<div class="marker-dot"></div>
+					<div class="marker-year">2020</div>
+				</div>
+				<div class="timeline-card">
+					<div class="card-icon">
+						<svg width="40" height="40" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+							<path d="M21 16V8C21 6.89543 20.1046 6 19 6H5C3.89543 6 3 6.89543 3 8V16C3 17.1046 3.89543 18 5 18H19C20.1046 18 21 17.1046 21 16Z" stroke="#25c1ce" stroke-width="2"/>
+							<circle cx="12" cy="12" r="3" stroke="#25c1ce" stroke-width="2"/>
+						</svg>
+					</div>
+					<h3 class="card-title">Digitale Transformatie</h3>
+					<p class="card-description">
+						Lancering van ons remote monitoring platform en bereiken van 100 tevreden klanten.
+					</p>
+					<div class="card-achievements">
+						<span class="achievement-tag">Remote Platform</span>
+						<span class="achievement-tag">100+ Klanten</span>
+					</div>
+				</div>
+			</div>
+
+			<div class="timeline-item stagger-item">
+				<div class="timeline-marker">
+					<div class="marker-dot"></div>
+					<div class="marker-year">2022</div>
+				</div>
+				<div class="timeline-card">
+					<div class="card-icon">
+						<svg width="40" height="40" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+							<path d="M3 21V3H21L3 21Z" stroke="#25c1ce" stroke-width="2"/>
+							<path d="M12 7V17M8 12H16" stroke="#25c1ce" stroke-width="2"/>
+						</svg>
+					</div>
+					<h3 class="card-title">Expansie</h3>
+					<p class="card-description">
+						Opening van onze derde vestiging en uitbreiding van diensten naar heel Nederland.
+					</p>
+					<div class="card-achievements">
+						<span class="achievement-tag">3 Vestigingen</span>
+						<span class="achievement-tag">Landelijk</span>
+					</div>
+				</div>
+			</div>
+
+			<div class="timeline-item stagger-item">
+				<div class="timeline-marker">
+					<div class="marker-dot"></div>
+					<div class="marker-year">2024</div>
+				</div>
+				<div class="timeline-card">
+					<div class="card-icon">
+						<svg width="40" height="40" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+							<path d="M5 3V19L12 15L19 19V3" stroke="#25c1ce" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+						</svg>
+					</div>
+					<h3 class="card-title">Mijlpaal Bereikt</h3>
+					<p class="card-description">
+						410 jarig bestaan en meer dan 500 tevreden klanten door heel Nederland.
+					</p>
+					<div class="card-achievements">
+						<span class="achievement-tag">10 Jaar Ervaring</span>
+						<span class="achievement-tag">500+ Klanten</span>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="timeline-stats fade-in">
+			<div class="stat-card">
+				<div class="stat-number">500+</div>
+				<div class="stat-label">Tevreden Klanten</div>
+			</div>
+			<div class="stat-card">
+				<div class="stat-number">10+</div>
+				<div class="stat-label">Jaar Ervaring</div>
+			</div>
+			<div class="stat-card">
+				<div class="stat-number">3</div>
+				<div class="stat-label">Vestigingen</div>
+			</div>
+			<div class="stat-card">
+				<div class="stat-number">24/7</div>
+				<div class="stat-label">Support</div>
+			</div>
+		</div>
+	</div>
+</section>
+
+<style>
+	.company-timeline {
+		padding: 100px 20px;
+		background: linear-gradient(135deg, #f8fafb 0%, #e8f4f5 100%);
+		position: relative;
+		overflow: hidden;
+	}
+
+	.company-timeline::before {
+		content: '';
+		position: absolute;
+		top: 0;
+		left: 0;
+		right: 0;
+		height: 1px;
+		background: linear-gradient(90deg, transparent, #25c1ce, transparent);
+		opacity: 0.3;
+	}
+
+	.timeline-container {
+		max-width: 1200px;
+		margin: 0 auto;
+	}
+
+	.timeline-header {
+		text-align: center;
+		margin-bottom: 100px;
+	}
+
+	.section-badge {
+		display: inline-flex;
+		align-items: center;
+		justify-content: center;
+		background: rgba(37, 193, 206, 0.1);
+		border: 1px solid rgba(37, 193, 206, 0.2);
+		border-radius: 50px;
+		padding: 8px 20px;
+		margin-bottom: 24px;
+	}
+
+	.section-badge span {
+		font-size: 14px;
+		font-weight: 600;
+		color: #25c1ce;
+		letter-spacing: 1px;
+	}
+
+	.section-title {
+		font-size: clamp(2rem, 4vw, 3rem);
+		font-weight: 800;
+		color: #2c3e50;
+		margin-bottom: 24px;
+		line-height: 1.2;
+	}
+
+	.highlight {
+		background: linear-gradient(135deg, #25c1ce 0%, #20b3bc 100%);
+		-webkit-background-clip: text;
+		-webkit-text-fill-color: transparent;
+		background-clip: text;
+	}
+
+	.section-description {
+		font-size: 18px;
+		line-height: 1.6;
+		color: #64748b;
+		max-width: 600px;
+		margin: 0 auto;
+	}
+
+	.timeline-content {
+		position: relative;
+		padding: 40px 0;
+	}
+
+	.timeline-track {
+		position: absolute;
+		left: 50%;
+		top: 0;
+		bottom: 0;
+		width: 4px;
+		background: linear-gradient(180deg, #25c1ce 0%, #20b3bc 100%);
+		transform: translateX(-50%);
+		border-radius: 2px;
+	}
+
+	.timeline-item {
+		position: relative;
+		display: flex;
+		align-items: center;
+		margin-bottom: 80px;
+	}
+
+	.timeline-item:nth-child(even) {
+		flex-direction: row-reverse;
+	}
+
+	/* Offset cards from timeline line */
+	.timeline-item:nth-child(odd) .timeline-card {
+		margin-right: 20px;
+	}
+
+	.timeline-item:nth-child(even) .timeline-card {
+		margin-left: 20px;
+	}
+
+	.timeline-marker {
+		position: absolute;
+		left: 50%;
+		transform: translateX(-50%);
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		z-index: 2;
+	}
+
+	.marker-dot {
+		width: 20px;
+		height: 20px;
+		background: white;
+		border: 4px solid #25c1ce;
+		border-radius: 50%;
+		margin-bottom: 12px;
+		box-shadow: 0 0 0 4px rgba(37, 193, 206, 0.1);
+		transition: all 0.3s ease;
+	}
+
+	.timeline-item:hover .marker-dot {
+		transform: scale(1.3);
+		box-shadow: 0 0 0 8px rgba(37, 193, 206, 0.1);
+	}
+
+	.marker-year {
+		background: #25c1ce;
+		color: white;
+		padding: 6px 12px;
+		border-radius: 20px;
+		font-weight: 700;
+		font-size: 14px;
+		box-shadow: 0 4px 15px rgba(37, 193, 206, 0.3);
+	}
+
+	.timeline-card {
+		background: white;
+		border-radius: 20px;
+		padding: 30px;
+		box-shadow: 0 10px 40px rgba(0, 0, 0, 0.08);
+		border: 1px solid rgba(37, 193, 206, 0.1);
+		width: calc(50% - 60px);
+		transition: all 0.3s ease;
+		position: relative;
+	}
+
+	.timeline-card::before {
+		content: '';
+		position: absolute;
+		top: 50%;
+		width: 30px;
+		height: 2px;
+		background: #25c1ce;
+	}
+
+	.timeline-item:nth-child(odd) .timeline-card::before {
+		right: -30px;
+	}
+
+	.timeline-item:nth-child(even) .timeline-card::before {
+		left: -30px;
+	}
+
+	
+	.card-icon {
+		width: 60px;
+		height: 60px;
+		background: rgba(37, 193, 206, 0.1);
+		border-radius: 15px;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		margin-bottom: 20px;
+		transition: all 0.3s ease;
+	}
+
+	.timeline-card:hover .card-icon {
+		background: linear-gradient(135deg, #25c1ce 0%, #20b3bc 100%);
+		transform: scale(1.1) rotate(5deg);
+	}
+
+	.timeline-card:hover .card-icon svg {
+		stroke: white;
+	}
+
+	.card-title {
+		font-size: 24px;
+		font-weight: 700;
+		color: #2c3e50;
+		margin-bottom: 12px;
+	}
+
+	.card-description {
+		font-size: 16px;
+		line-height: 1.6;
+		color: #64748b;
+		margin-bottom: 20px;
+	}
+
+	.card-achievements {
+		display: flex;
+		flex-wrap: wrap;
+		gap: 8px;
+	}
+
+	.achievement-tag {
+		background: rgba(37, 193, 206, 0.1);
+		color: #25c1ce;
+		padding: 6px 12px;
+		border-radius: 20px;
+		font-size: 12px;
+		font-weight: 600;
+		border: 1px solid rgba(37, 193, 206, 0.2);
+		transition: all 0.3s ease;
+	}
+
+	.achievement-tag:hover {
+		background: #25c1ce;
+		color: white;
+		transform: translateY(-2px);
+	}
+
+	.timeline-stats {
+		display: grid;
+		grid-template-columns: repeat(4, 1fr);
+		gap: 30px;
+		margin-top: 80px;
+	}
+
+	.stat-card {
+		background: white;
+		border-radius: 20px;
+		padding: 30px;
+		text-align: center;
+		box-shadow: 0 10px 40px rgba(0, 0, 0, 0.05);
+		border: 1px solid rgba(37, 193, 206, 0.1);
+		transition: all 0.3s ease;
+	}
+
+	.stat-card:hover {
+		transform: translateY(-5px);
+		box-shadow: 0 15px 50px rgba(37, 193, 206, 0.1);
+	}
+
+	.stat-number {
+		font-size: 2.5rem;
+		font-weight: 800;
+		color: #25c1ce;
+		margin-bottom: 8px;
+	}
+
+	.stat-label {
+		font-size: 14px;
+		font-weight: 600;
+		color: #64748b;
+		text-transform: uppercase;
+		letter-spacing: 0.5px;
+	}
+
+	/* Responsive design */
+	@media (max-width: 768px) {
+		.company-timeline {
+			padding: 60px 20px;
+		}
+
+		.timeline-content {
+			padding: 20px 0;
+		}
+
+		.timeline-track {
+			left: 30px;
+		}
+
+		.timeline-item {
+			flex-direction: row !important;
+			margin-bottom: 60px;
+			padding-left: 60px;
+		}
+
+		.timeline-marker {
+			left: 30px;
+		}
+
+		.timeline-card {
+			width: 100%;
+		}
+
+		.timeline-card::before {
+			display: none;
+		}
+
+		.timeline-stats {
+			grid-template-columns: repeat(2, 1fr);
+			gap: 20px;
+		}
+
+		.stat-number {
+			font-size: 2rem;
+		}
+
+		.section-title {
+			font-size: 2rem;
+		}
+	}
+</style>
