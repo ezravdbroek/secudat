@@ -1577,6 +1577,7 @@ import Footer from '../components/Footer.astro';
 		.contact-hero {
 			padding: 30px 10px 20px;
 			overflow-x: hidden;
+			overflow-y: auto;
 		}
 
 		.hero-content {
@@ -1609,6 +1610,37 @@ import Footer from '../components/Footer.astro';
 			text-overflow: ellipsis;
 		}
 
+		/* Fix floating cards positioning */
+		.hero-visual {
+			height: 200px;
+			position: relative;
+			overflow: hidden;
+		}
+
+		.floating-cards {
+			position: relative;
+			height: 100%;
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			justify-content: center;
+			gap: 15px;
+		}
+
+		.card {
+			position: relative !important;
+			top: auto !important;
+			bottom: auto !important;
+			left: auto !important;
+			right: auto !important;
+			animation: none !important;
+			transform: none !important;
+			width: 100%;
+			max-width: 200px;
+			padding: 16px;
+			margin: 0 auto;
+		}
+
 		.contact-methods,
 		.contact-form-section,
 		.map-section {
@@ -1622,17 +1654,35 @@ import Footer from '../components/Footer.astro';
 			overflow-x: hidden;
 		}
 
-		.hero-visual {
-			height: 180px;
-		}
-
 		.method-card {
 			padding: 20px 12px;
+			text-align: center;
+		}
+
+		.method-card h3 {
+			font-size: 1.1rem;
+			margin-bottom: 8px;
+		}
+
+		.method-contact {
+			font-size: 0.95rem;
+			margin-bottom: 5px;
+		}
+
+		.method-contact a {
+			white-space: nowrap;
+			font-weight: 600;
+		}
+
+		.method-time {
+			font-size: 0.85rem;
+			margin-bottom: 15px;
 		}
 
 		.method-icon {
 			width: 50px;
 			height: 50px;
+			margin: 0 auto 15px;
 		}
 
 		.btn-outline {
@@ -1640,6 +1690,9 @@ import Footer from '../components/Footer.astro';
 			font-size: 0.9rem;
 			min-height: 40px;
 			box-sizing: border-box;
+			width: 100%;
+			max-width: 150px;
+			margin: 0 auto;
 		}
 
 		.form-wrapper {
@@ -1682,16 +1735,38 @@ import Footer from '../components/Footer.astro';
 
 		.emergency-card-large {
 			padding: 20px 15px;
+			text-align: center;
+		}
+
+		.emergency-content {
+			text-align: center;
+			margin-bottom: 15px;
+		}
+
+		.emergency-details h3 {
+			font-size: 1.2rem;
+			margin-bottom: 8px;
+		}
+
+		.emergency-details p {
+			font-size: 0.9rem;
+			margin-bottom: 12px;
 		}
 
 		.emergency-phone {
 			font-size: 1.1rem;
+			white-space: nowrap;
+			font-weight: 700;
 		}
 
 		.btn-emergency-large {
 			padding: 12px 20px;
 			font-size: 0.95rem;
 			min-height: 48px;
+			width: 100%;
+			max-width: 250px;
+			justify-content: center;
+			margin: 0 auto;
 		}
 
 		.map-overlay {
