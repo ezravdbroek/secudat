@@ -8,14 +8,7 @@
 			<div class="footer-section">
 				<div class="footer-brand">
 					<div class="logo">
-						<div class="camera-icon">
-							<svg width="32" height="32" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-								<path d="M23 7L16 12L23 17V7Z" fill="#25c1ce"/>
-								<rect x="1" y="5" width="18" height="14" rx="2" stroke="#25c1ce" stroke-width="2"/>
-								<circle cx="10" cy="12" r="2" fill="#25c1ce"/>
-							</svg>
-						</div>
-						<span class="brand-text">SECUDAT</span>
+						<img src="/images/logo/logosmall.fw_.png" alt="Secudat" class="company-logo-footer" />
 					</div>
 					<p class="footer-description">
 						Uw specialist in beveiligingscamera's en beveiligingssystemen.
@@ -189,12 +182,16 @@
 		margin-bottom: 8px;
 	}
 
-	.camera-icon svg {
+	.company-logo-footer {
+		height: 40px;
+		width: auto;
+		max-width: 150px;
 		transition: transform 0.3s ease;
+		display: block;
 	}
 
-	.logo:hover .camera-icon svg {
-		transform: rotate(5deg) scale(1.1);
+	.logo:hover .company-logo-footer {
+		transform: scale(1.05);
 	}
 
 	.brand-text {
