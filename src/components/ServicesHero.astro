@@ -496,54 +496,104 @@
 
 	@media (max-width: 480px) {
 		.services-hero {
-			padding: 100px 15px 60px;
+			padding: 60px 10px 40px;
+			min-height: auto;
+			overflow-x: hidden;
+		}
+
+		.hero-container {
+			padding: 0 10px;
+			max-width: 100%;
 		}
 
 		.hero-content {
-			padding: 0 15px;
-			gap: 40px;
+			padding: 0 5px;
+			gap: 30px;
 			max-width: 100%;
 			width: 100%;
 			overflow: hidden;
 		}
 
+		.hero-text {
+			text-align: center;
+		}
+
+		.hero-title {
+			font-size: 1.8rem;
+			line-height: 1.2;
+		}
+
+		.hero-description {
+			font-size: 0.9rem;
+			margin: 0 auto 25px;
+			max-width: 100%;
+		}
+
 		.hero-features {
 			flex-direction: column;
-			align-items: stretch;
+			align-items: center;
+			gap: 12px;
+			margin-bottom: 25px;
+		}
+
+		.feature-item {
+			width: 100%;
+			max-width: 280px;
+			padding: 12px 16px;
+		}
+
+		.feature-icon {
+			width: 40px;
+			height: 40px;
 		}
 
 		.hero-actions {
 			display: flex;
 			flex-direction: column;
-			gap: 16px;
+			gap: 12px;
 			width: 100%;
-			margin: 0;
+			max-width: 280px;
+			margin: 0 auto;
 			padding: 0;
 		}
 
+		.primary-btn,
+		.secondary-btn {
+			width: 100%;
+			max-width: 100%;
+			padding: 14px 20px;
+			font-size: 0.95rem;
+			min-height: 48px;
+			box-sizing: border-box;
+			white-space: nowrap;
+			overflow: hidden;
+			text-overflow: ellipsis;
+			justify-content: center;
+			align-items: center;
+		}
+
 		.service-card {
-			min-width: 150px;
-			padding: 15px;
+			min-width: 120px;
+			padding: 12px;
+		}
+
+		.service-card span {
+			font-size: 0.8rem;
 		}
 
 		.security-showcase {
-			max-width: 300px;
-			height: 300px;
+			max-width: 250px;
+			height: 250px;
 		}
 
-		.hero-title {
-			font-size: 2rem;
+		.floating-services {
+			display: none;
 		}
 
-		.hero-description {
-			font-size: 1rem;
-		}
-
-		/* Mobile specific adjustments */
-		.hero-actions .primary-btn,
-		.hero-actions .secondary-btn {
-			padding: 14px 20px;
-			font-size: 0.95rem;
+		.services-badge {
+			padding: 10px 20px;
+			font-size: 13px;
+			margin-bottom: 16px;
 		}
 	}
 </style>
