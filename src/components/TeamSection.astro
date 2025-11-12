@@ -511,12 +511,12 @@
 	/* Responsive design */
 	@media (max-width: 768px) {
 		.team-section {
-			padding: 60px 20px;
+			padding: 50px 15px;
 		}
 
 		.team-grid {
 			grid-template-columns: 1fr;
-			gap: 30px;
+			gap: 25px;
 		}
 
 		.member-card {
@@ -524,15 +524,89 @@
 		}
 
 		.team-cta {
-			padding: 40px 20px;
+			padding: 35px 20px;
 		}
 
 		.cta-title {
-			font-size: 1.5rem;
+			font-size: 1.4rem;
 		}
 
 		.section-title {
-			font-size: 2rem;
+			font-size: 1.8rem;
+		}
+	}
+
+	@media (max-width: 480px) {
+		.team-section {
+			padding: 40px 10px;
+			overflow-x: hidden;
+		}
+
+		.team-container {
+			max-width: 100%;
+		}
+
+		.team-header {
+			margin-bottom: 30px;
+		}
+
+		.section-title {
+			font-size: 1.6rem;
+			line-height: 1.2;
+		}
+
+		.section-description {
+			font-size: 0.9rem;
+		}
+
+		.team-grid {
+			gap: 20px;
+		}
+
+		.member-card {
+			max-width: 100%;
+		}
+
+		.member-image {
+			height: 160px;
+		}
+
+		.member-info {
+			padding: 20px 15px;
+		}
+
+		.member-name {
+			font-size: 1.2rem;
+		}
+
+		.member-role {
+			font-size: 0.9rem;
+		}
+
+		.member-description {
+			font-size: 0.8rem;
+		}
+
+		.skill-tag {
+			font-size: 0.75rem;
+			padding: 4px 8px;
+		}
+
+		.team-cta {
+			padding: 30px 15px;
+		}
+
+		.cta-title {
+			font-size: 1.2rem;
+		}
+
+		.cta-description {
+			font-size: 0.9rem;
+		}
+
+		.cta-btn {
+			padding: 12px 24px;
+			font-size: 0.9rem;
 		}
 	}
 </style>

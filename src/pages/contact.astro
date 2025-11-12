@@ -1575,53 +1575,135 @@ import Footer from '../components/Footer.astro';
 	@media (max-width: 480px) {
 		/* Small mobile adjustments */
 		.contact-hero {
-			padding: 40px 15px;
+			padding: 30px 10px 20px;
+			overflow-x: hidden;
+		}
+
+		.hero-content {
+			max-width: 100%;
+			width: 100%;
+		}
+
+		.hero-text {
+			padding-right: 0;
+		}
+
+		.hero-cta {
+			flex-direction: column;
+			gap: 12px;
+			width: 100%;
+			max-width: 280px;
+			margin: 0 auto;
+		}
+
+		.cta-primary,
+		.cta-secondary {
+			width: 100%;
+			max-width: 100%;
+			padding: 14px 20px;
+			font-size: 0.95rem;
+			min-height: 48px;
+			box-sizing: border-box;
+			white-space: nowrap;
+			overflow: hidden;
+			text-overflow: ellipsis;
 		}
 
 		.contact-methods,
 		.contact-form-section,
 		.map-section {
-			padding: 60px 15px;
+			padding: 40px 10px;
+		}
+
+		.methods-container,
+		.form-container,
+		.map-container {
+			max-width: 100%;
+			overflow-x: hidden;
 		}
 
 		.hero-visual {
-			height: 200px;
+			height: 180px;
 		}
 
 		.method-card {
-			padding: 25px 15px;
+			padding: 20px 12px;
+		}
+
+		.method-icon {
+			width: 50px;
+			height: 50px;
+		}
+
+		.btn-outline {
+			padding: 10px 16px;
+			font-size: 0.9rem;
+			min-height: 40px;
+			box-sizing: border-box;
 		}
 
 		.form-wrapper {
-			padding: 25px 15px;
+			padding: 20px 12px;
+		}
+
+		.form-group input,
+		.form-group select,
+		.form-group textarea {
+			padding: 12px 14px;
+			font-size: 14px;
+		}
+
+		.submit-btn {
+			width: 100%;
+			padding: 14px 20px;
+			font-size: 0.95rem;
+			min-height: 48px;
+			justify-content: center;
 		}
 
 		.address-card {
-			padding: 20px 15px;
+			padding: 16px 12px;
 		}
 
 		.hero-title,
 		.methods-title,
 		.form-info h2,
 		.map-info h2 {
-			font-size: 1.75rem;
+			font-size: 1.6rem;
+			line-height: 1.2;
 		}
 
 		.hero-description,
 		.methods-description,
 		.form-info > p,
 		.map-info > p {
-			font-size: 16px;
+			font-size: 0.9rem;
 		}
 
-		/* Form adjustments for very small screens */
-		.form-actions {
-			justify-content: center;
+		.emergency-card-large {
+			padding: 20px 15px;
 		}
 
-		.submit-btn {
-			width: 100%;
-			justify-content: center;
+		.emergency-phone {
+			font-size: 1.1rem;
+		}
+
+		.btn-emergency-large {
+			padding: 12px 20px;
+			font-size: 0.95rem;
+			min-height: 48px;
+		}
+
+		.map-overlay {
+			bottom: 15px;
+			left: 15px;
+			right: 15px;
+			padding: 15px;
+		}
+
+		.directions-btn {
+			padding: 8px 12px;
+			font-size: 0.85rem;
 		}
 	}
 </style>

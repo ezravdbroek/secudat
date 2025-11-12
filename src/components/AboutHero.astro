@@ -512,74 +512,110 @@
 	@media (max-width: 480px) {
 		.about-hero {
 			min-height: auto;
-			padding: 80px 0;
+			padding: 60px 0 40px;
 		}
 
 		.hero-container {
-			padding: 0 15px;
+			padding: 0 10px;
+			max-width: 100%;
+			overflow-x: hidden;
+		}
+
+		.hero-content {
+			gap: 40px;
+		}
+
+		.hero-left {
+			order: 1;
+		}
+
+		.hero-right {
+			order: 2;
 		}
 
 		.hero-title {
-			font-size: 2rem;
+			font-size: 1.8rem;
+			line-height: 1.2;
 		}
 
 		.hero-description {
-			font-size: 0.95rem;
+			font-size: 0.9rem;
+			margin-bottom: 30px;
 		}
 
 		.company-badge {
-			padding: 10px 20px;
-			font-size: 14px;
-			margin-bottom: 20px;
+			padding: 8px 16px;
+			font-size: 13px;
+			margin-bottom: 16px;
 		}
 
 		.company-stats {
-			flex-direction: column;
-			gap: 25px;
+			flex-direction: row;
+			justify-content: space-around;
+			gap: 15px;
 			margin-bottom: 30px;
 		}
 
 		.stat-number {
-			font-size: 2rem;
+			font-size: 1.6rem;
 		}
 
 		.stat-label {
-			font-size: 0.8rem;
+			font-size: 0.75rem;
 		}
 
 		.hero-actions {
+			display: flex;
+			flex-direction: column;
 			gap: 12px;
+			width: 100%;
+			max-width: 280px;
+			margin: 0 auto;
 		}
 
 		.primary-btn, .secondary-btn {
-			padding: 16px 32px;
-			font-size: 1rem;
+			padding: 14px 24px;
+			font-size: 0.95rem;
+			width: 100%;
+			min-height: 48px;
+			box-sizing: border-box;
+			white-space: nowrap;
+			overflow: hidden;
+			text-overflow: ellipsis;
 		}
 
 		.company-timeline {
-			padding: 25px 20px;
-			margin-bottom: 40px;
+			padding: 20px 15px;
+			margin-bottom: 30px;
 		}
 
 		.timeline-item {
 			flex-direction: column;
 			text-align: center;
-			gap: 15px;
-			padding: 20px 15px;
+			gap: 12px;
+			padding: 16px 12px;
 		}
 
 		.timeline-content h3 {
-			font-size: 1.1rem;
+			font-size: 1rem;
 		}
 
 		.timeline-content p {
-			font-size: 0.9rem;
+			font-size: 0.85rem;
+		}
+
+		.trust-indicators {
+			flex-direction: column;
+			align-items: center;
+			gap: 12px;
 		}
 
 		.trust-item {
 			padding: 12px 20px;
 			flex-direction: column;
 			gap: 8px;
+			width: 100%;
+			max-width: 200px;
 		}
 
 		.trust-item svg {
