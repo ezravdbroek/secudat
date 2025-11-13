@@ -727,6 +727,8 @@ import Footer from '../components/Footer.astro';
 
 	.emergency-action {
 		flex-shrink: 0;
+		display: flex;
+		justify-content: center;
 	}
 
 	.btn-emergency-large {
@@ -851,8 +853,13 @@ import Footer from '../components/Footer.astro';
 		display: block;
 	}
 
+	.method-action {
+		display: flex;
+		justify-content: center;
+	}
+
 	.btn-outline {
-		display: inline-block;
+		display: inline-flex;
 		padding: 16px 32px;
 		background: transparent;
 		color: #25c1ce;
@@ -863,7 +870,6 @@ import Footer from '../components/Footer.astro';
 		border: 2px solid #25c1ce;
 		transition: all 0.3s ease;
 		min-height: 52px;
-		display: inline-flex;
 		align-items: center;
 		justify-content: center;
 	}
@@ -1518,6 +1524,67 @@ import Footer from '../components/Footer.astro';
 
 		.form-wrapper {
 			padding: 30px 20px;
+			max-width: 600px;
+			margin: 0 auto;
+		}
+
+		.form-group label {
+			text-align: left;
+		}
+
+		.form-checkbox label {
+			text-align: left;
+		}
+
+		.form-features {
+			margin-bottom: 40px;
+			text-align: center;
+		}
+
+		.form-features {
+			margin-bottom: 40px;
+			text-align: center;
+		}
+
+		.feature-item {
+			display: flex;
+			align-items: center;
+			gap: 12px;
+			margin-bottom: 12px;
+			justify-content: center;
+		}
+
+		.feature-icon {
+			width: 32px;
+			height: 32px;
+			background: rgba(37, 193, 206, 0.1);
+			border-radius: 8px;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			flex-shrink: 0;
+			text-align: right;
+		}
+
+		.feature-item span {
+			text-align: left;
+			min-width: 160px;
+			display: block;
+		}
+
+		.emergency-btn {
+			display: flex;
+			align-items: center;
+			gap: 12px;
+			padding: 16px 24px;
+			background: linear-gradient(135deg, #ef4444, #dc2626);
+			color: white;
+			text-decoration: none;
+			border-radius: 12px;
+			font-weight: 600;
+			transition: all 0.3s ease;
+			white-space: nowrap;
+			font-size: 14px;
 		}
 
 		.form-row {
@@ -1622,6 +1689,41 @@ import Footer from '../components/Footer.astro';
 			height: 200px;
 		}
 
+		/* Floating Cards adjustments for mobile */
+		.card {
+			padding: 16px;
+			min-width: 100px;
+			transform: scale(0.85);
+		}
+
+		.card-icon {
+			width: 40px;
+			height: 40px;
+		}
+
+		.card span {
+			font-size: 12px;
+		}
+
+		.card-1 {
+			top: 10px;
+			right: 10px;
+			z-index: 3;
+		}
+
+		.card-2 {
+			bottom: 15px;
+			left: 10px;
+			z-index: 2;
+		}
+
+		.card-3 {
+			top: 50%;
+			left: 50%;
+			transform: translate(-50%, -50%) scale(0.85);
+			z-index: 1;
+		}
+
 		.contact-methods,
 		.contact-form-section,
 		.map-section {
@@ -1673,8 +1775,9 @@ import Footer from '../components/Footer.astro';
 			width: 100%;
 			max-width: 200px;
 			margin: 0 auto;
-			display: block;
-			text-align: center;
+			display: flex;
+			align-items: center;
+			justify-content: center;
 		}
 
 		.form-wrapper {

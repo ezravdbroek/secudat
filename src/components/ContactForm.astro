@@ -232,7 +232,7 @@
 
 	.contact-card {
 		display: flex;
-		align-items: flex-start;
+		align-items: center;
 		gap: 20px;
 		padding: 24px;
 		background: rgba(37, 193, 206, 0.05);
@@ -290,56 +290,96 @@
 	/* Emergency Card */
 	.emergency-card {
 		display: flex;
-		align-items: flex-start;
-		gap: 20px;
-		padding: 24px;
+		align-items: center;
+		gap: 16px;
+		padding: 20px;
 		background: linear-gradient(135deg, #ef4444 0%, #dc2626 100%);
 		border-radius: 16px;
 		color: white;
 		margin-top: 16px;
+		position: relative;
+		overflow: hidden;
+	}
+
+	.emergency-card::before {
+		content: '';
+		position: absolute;
+		top: 0;
+		left: 0;
+		right: 0;
+		height: 3px;
+		background: linear-gradient(90deg, #fbbf24, #f59e0b, #fbbf24);
+		animation: pulse 2s ease-in-out infinite;
+	}
+
+	@keyframes pulse {
+		0%, 100% { opacity: 1; }
+		50% { opacity: 0.6; }
 	}
 
 	.emergency-icon {
-		width: 60px;
-		height: 60px;
-		background: rgba(255, 255, 255, 0.2);
-		border-radius: 12px;
+		width: 48px;
+		height: 48px;
+		background: rgba(255, 255, 255, 0.15);
+		border-radius: 50%;
 		display: flex;
 		align-items: center;
 		justify-content: center;
 		flex-shrink: 0;
+		backdrop-filter: blur(10px);
+		border: 2px solid rgba(255, 255, 255, 0.2);
 	}
 
 	.emergency-icon svg {
+		width: 24px;
+		height: 24px;
 		stroke: white;
 		fill: white;
 	}
 
+	.emergency-details {
+		flex: 1;
+	}
+
 	.emergency-details h3 {
-		font-size: 18px;
+		font-size: 16px;
 		font-weight: 700;
 		margin-bottom: 4px;
+		display: flex;
+		align-items: center;
+		gap: 6px;
+	}
+
+	.emergency-details h3::before {
+		content: '🚨';
+		font-size: 16px;
 	}
 
 	.emergency-details p {
-		font-size: 16px;
+		font-size: 15px;
 		font-weight: 600;
-		margin-bottom: 4px;
+		margin-bottom: 2px;
+		line-height: 1.2;
 	}
 
 	.emergency-details a {
 		color: white;
 		text-decoration: none;
-		transition: opacity 0.3s ease;
+		transition: all 0.3s ease;
+		display: inline-flex;
+		align-items: center;
+		gap: 6px;
 	}
 
 	.emergency-details a:hover {
-		opacity: 0.8;
+		transform: translateY(-1px);
+		text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
 	}
 
 	.emergency-subtitle {
-		font-size: 14px;
+		font-size: 12px;
 		opacity: 0.9;
+		font-weight: 500;
 	}
 
 	/* Contact Form */
