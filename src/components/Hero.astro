@@ -114,13 +114,23 @@
 		contain: layout;
 	}
 
+	/* Mobile fixes for Safari */
+	@media (max-width: 768px) {
+		.hero {
+			overflow: visible;
+			contain: none;
+		}
+	}
+
 	/* Mobile specific height */
 	@media (max-width: 768px) {
 		.hero {
 			height: auto;
-			min-height: calc(100vh - 100px);
+			min-height: 100vh;
+			min-height: -webkit-fill-available;
 			align-items: flex-start;
 			padding-top: 20px;
+			padding-bottom: 100px;
 		}
 	}
 
