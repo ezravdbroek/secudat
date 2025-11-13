@@ -1538,12 +1538,9 @@ import Footer from '../components/Footer.astro';
 
 		.form-features {
 			margin-bottom: 40px;
-			text-align: center;
-		}
-
-		.form-features {
-			margin-bottom: 40px;
-			text-align: center;
+			display: flex;
+			flex-direction: column;
+			align-items: center;
 		}
 
 		.feature-item {
@@ -1551,7 +1548,9 @@ import Footer from '../components/Footer.astro';
 			align-items: center;
 			gap: 12px;
 			margin-bottom: 12px;
-			justify-content: center;
+			justify-content: flex-start;
+			width: 100%;
+			max-width: 320px;
 		}
 
 		.feature-icon {
@@ -1563,13 +1562,12 @@ import Footer from '../components/Footer.astro';
 			align-items: center;
 			justify-content: center;
 			flex-shrink: 0;
-			text-align: right;
 		}
 
 		.feature-item span {
 			text-align: left;
-			min-width: 160px;
-			display: block;
+			flex: 1;
+			line-height: 1.4;
 		}
 
 		.emergency-btn {
