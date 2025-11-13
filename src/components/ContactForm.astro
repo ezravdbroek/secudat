@@ -309,7 +309,13 @@
 		right: 0;
 		height: 3px;
 		background: linear-gradient(90deg, #fbbf24, #f59e0b, #fbbf24);
-		animation: pulse 2s ease-in-out infinite;
+	}
+
+	/* Emergency pulse animation for desktop only */
+	@media (min-width: 769px) {
+		.emergency-card::before {
+			animation: pulse 2s ease-in-out infinite;
+		}
 	}
 
 	@keyframes pulse {
@@ -561,24 +567,250 @@
 	/* Responsive design */
 	@media (max-width: 768px) {
 		.contact {
-			padding: 60px 20px;
+			padding: 60px 16px;
+		}
+
+		.contact-header {
+			margin-bottom: 50px;
+		}
+
+		.section-badge {
+			margin-bottom: 20px;
+			padding: 6px 16px;
+		}
+
+		.section-badge span {
+			font-size: 12px;
+		}
+
+		.section-title {
+			font-size: 1.8rem;
+			margin-bottom: 20px;
+		}
+
+		.section-description {
+			font-size: 1rem;
+			max-width: 100%;
 		}
 
 		.contact-content {
 			grid-template-columns: 1fr;
-			gap: 50px;
+			gap: 40px;
+		}
+
+		.contact-info {
+			gap: 20px;
+		}
+
+		.contact-card {
+			padding: 18px 16px;
+			gap: 16px;
+		}
+
+		.contact-icon {
+			width: 50px;
+			height: 50px;
+		}
+
+		.contact-details h3 {
+			font-size: 1rem;
+		}
+
+		.contact-details p {
+			font-size: 0.95rem;
+		}
+
+		.contact-subtitle {
+			font-size: 0.85rem;
+		}
+
+		.emergency-card {
+			padding: 16px;
+			gap: 14px;
+		}
+
+		.emergency-icon {
+			width: 40px;
+			height: 40px;
+		}
+
+		.emergency-icon svg {
+			width: 20px;
+			height: 20px;
+		}
+
+		.emergency-details h3 {
+			font-size: 0.9rem;
+		}
+
+		.emergency-details p {
+			font-size: 0.85rem;
+		}
+
+		.emergency-subtitle {
+			font-size: 0.75rem;
 		}
 
 		.form-row {
 			grid-template-columns: 1fr;
+			gap: 16px;
 		}
 
 		.contact-form-wrapper {
-			padding: 30px 20px;
+			padding: 25px 18px;
+		}
+
+		.contact-form {
+			gap: 20px;
+		}
+
+		.form-group label {
+			font-size: 0.85rem;
+			margin-bottom: 6px;
+		}
+
+		.form-group input,
+		.form-group select,
+		.form-group textarea {
+			padding: 10px 14px;
+			font-size: 0.95rem;
+		}
+
+		.form-checkbox label {
+			font-size: 0.8rem;
+		}
+
+		.submit-btn {
+			padding: 14px 28px;
+			font-size: 0.95rem;
+		}
+
+		.form-message {
+			padding: 14px;
+			font-size: 0.85rem;
+		}
+	}
+
+	@media (max-width: 480px) {
+		.contact {
+			padding: 50px 12px;
+		}
+
+		.contact-header {
+			margin-bottom: 40px;
+		}
+
+		.section-badge {
+			margin-bottom: 16px;
+			padding: 5px 14px;
+		}
+
+		.section-badge span {
+			font-size: 11px;
 		}
 
 		.section-title {
-			font-size: 2rem;
+			font-size: 1.6rem;
+			margin-bottom: 16px;
+		}
+
+		.section-description {
+			font-size: 0.9rem;
+		}
+
+		.contact-content {
+			gap: 35px;
+		}
+
+		.contact-info {
+			gap: 16px;
+		}
+
+		.contact-card {
+			padding: 16px 14px;
+			gap: 14px;
+		}
+
+		.contact-icon {
+			width: 45px;
+			height: 45px;
+		}
+
+		.contact-details h3 {
+			font-size: 0.9rem;
+		}
+
+		.contact-details p {
+			font-size: 0.85rem;
+		}
+
+		.contact-subtitle {
+			font-size: 0.8rem;
+		}
+
+		.emergency-card {
+			padding: 14px;
+			gap: 12px;
+		}
+
+		.emergency-icon {
+			width: 36px;
+			height: 36px;
+		}
+
+		.emergency-icon svg {
+			width: 18px;
+			height: 18px;
+		}
+
+		.emergency-details h3 {
+			font-size: 0.85rem;
+		}
+
+		.emergency-details p {
+			font-size: 0.8rem;
+		}
+
+		.emergency-subtitle {
+			font-size: 0.7rem;
+		}
+
+		.form-row {
+			gap: 14px;
+		}
+
+		.contact-form-wrapper {
+			padding: 20px 16px;
+		}
+
+		.contact-form {
+			gap: 18px;
+		}
+
+		.form-group label {
+			font-size: 0.8rem;
+			margin-bottom: 5px;
+		}
+
+		.form-group input,
+		.form-group select,
+		.form-group textarea {
+			padding: 9px 12px;
+			font-size: 0.9rem;
+		}
+
+		.form-checkbox label {
+			font-size: 0.75rem;
+		}
+
+		.submit-btn {
+			padding: 12px 24px;
+			font-size: 0.9rem;
+		}
+
+		.form-message {
+			padding: 12px;
+			font-size: 0.8rem;
 		}
 	}
 </style>

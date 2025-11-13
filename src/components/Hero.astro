@@ -125,12 +125,20 @@
 	/* Mobile specific height */
 	@media (max-width: 768px) {
 		.hero {
-			height: auto;
+			height: auto !important;
 			min-height: 100vh;
 			min-height: -webkit-fill-available;
-			align-items: flex-start;
-			padding-top: 20px;
-			padding-bottom: 100px;
+			align-items: center;
+			justify-content: center;
+			padding: 100px 0 120px !important;
+			display: flex !important;
+		}
+
+		.hero-container {
+			width: 100%;
+			max-width: 100%;
+			padding: 0 24px !important;
+			margin: 0 auto;
 		}
 	}
 
@@ -235,6 +243,25 @@
 		padding: 0 20px;
 		position: relative;
 		z-index: 1;
+	}
+
+	/* Mobile container padding */
+	@media (max-width: 768px) {
+		.hero-container {
+			padding: 0 20px;
+			max-width: 100%;
+		}
+	}
+
+	/* Extra spacing for small phones */
+	@media (max-width: 480px) {
+		.hero {
+			padding: 120px 0 140px !important;
+		}
+
+		.hero-container {
+			padding: 0 20px !important;
+		}
 	}
 
 	.hero-content {
@@ -567,8 +594,13 @@
 
 	@media (max-width: 768px) {
 		.hero {
-			min-height: auto;
-			padding: 100px 0 80px;
+			height: auto;
+			min-height: 100vh;
+			min-height: -webkit-fill-available;
+			align-items: flex-start;
+			padding: 60px 20px 80px;
+			overflow: visible;
+			contain: none;
 		}
 
 		.hero-content {

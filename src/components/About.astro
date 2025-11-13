@@ -330,7 +330,13 @@
 		background: linear-gradient(135deg, #25c1ce 0%, #20b3bc 100%);
 		border-radius: 25px;
 		opacity: 0.1;
-		animation: float 8s ease-in-out infinite;
+	}
+
+	/* Animations only for desktop */
+	@media (min-width: 769px) {
+		.about-image-bg {
+			animation: float 8s ease-in-out infinite;
+		}
 	}
 
 	.about-image {
@@ -344,9 +350,15 @@
 		border-radius: 25px;
 		backdrop-filter: blur(10px);
 		box-shadow: 0 20px 60px rgba(37, 193, 206, 0.2);
-		animation: float 6s ease-in-out infinite reverse;
 		padding: 40px;
 		aspect-ratio: 4/5;
+	}
+
+	/* About image animation for desktop only */
+	@media (min-width: 769px) {
+		.about-image {
+			animation: float 6s ease-in-out infinite reverse;
+		}
 	}
 
 	.floating-badges {
@@ -368,8 +380,14 @@
 		align-items: center;
 		gap: 8px;
 		white-space: nowrap;
-		animation: badgeFloat 4s ease-in-out infinite;
 		border: 1px solid rgba(37, 193, 206, 0.2);
+	}
+
+	/* Badge animations for desktop only */
+	@media (min-width: 769px) {
+		.badge {
+			animation: badgeFloat 4s ease-in-out infinite;
+		}
 	}
 
 	.badge-1 {
@@ -472,34 +490,75 @@
 
 	@media (max-width: 768px) {
 		.about {
-			padding: 60px 20px;
+			padding: 60px 16px;
 		}
 
 		.about-content {
 			grid-template-columns: 1fr;
-			gap: 50px;
+			gap: 40px;
+		}
+
+		.about-text {
+			text-align: center;
 		}
 
 		.about-features {
 			grid-template-columns: 1fr;
-			gap: 24px;
+			gap: 20px;
+			max-width: 100%;
+			margin: 0 auto 32px;
+		}
+
+		.feature-item {
+			justify-content: center;
+			gap: 14px;
+		}
+
+		.feature-icon {
+			width: 36px;
+			height: 36px;
+		}
+
+		.feature-text h4 {
+			font-size: 1rem;
+			margin-bottom: 3px;
+		}
+
+		.feature-text p {
+			font-size: 0.85rem;
+		}
+
+		.about-description {
+			font-size: 1rem;
+			line-height: 1.6;
+			margin-bottom: 20px;
+		}
+
+		.section-badge {
+			margin-bottom: 20px;
+			padding: 6px 16px;
+		}
+
+		.section-badge span {
+			font-size: 12px;
+		}
+
+		.section-title {
+			font-size: 1.8rem;
+			margin-bottom: 24px;
 		}
 
 		.trust-grid {
 			grid-template-columns: repeat(2, 1fr);
-			gap: 30px;
+			gap: 25px;
 		}
 
 		.trust-section {
-			padding: 40px 20px;
-		}
-
-		.section-title {
-			font-size: 2rem;
+			padding: 35px 20px;
 		}
 
 		.about-image {
-			padding: 30px 20px;
+			padding: 25px 20px;
 		}
 
 		.about-image-container {
@@ -519,52 +578,40 @@
 			display: none;
 		}
 
-		.about-description {
-			font-size: 16px;
-		}
-
-		.feature-text h4 {
-			font-size: 16px;
-		}
-
 		.cta-button {
 			padding: 14px 28px;
-			font-size: 15px;
+			font-size: 0.95rem;
+		}
+
+		.about-cta {
+			justify-content: center;
+		}
+
+		.trust-title {
+			font-size: 1.5rem;
+			margin-bottom: 30px;
+		}
+
+		.trust-number {
+			font-size: 2.2rem;
+		}
+
+		.trust-label {
+			font-size: 0.85rem;
 		}
 	}
 
 	@media (max-width: 480px) {
 		.about {
-			padding: 40px 16px;
+			padding: 50px 12px;
 		}
 
 		.about-content {
-			gap: 40px;
+			gap: 35px;
 		}
 
-		.trust-grid {
-			grid-template-columns: 1fr;
-			gap: 24px;
-		}
-
-		.trust-section {
-			padding: 30px 16px;
-		}
-
-		.trust-title {
-			font-size: 1.5rem;
-		}
-
-		.trust-number {
-			font-size: 2rem;
-		}
-
-		.section-title {
-			font-size: 1.75rem;
-		}
-
-		.about-description {
-			font-size: 15px;
+		.about-features {
+			gap: 16px;
 		}
 
 		.feature-item {
@@ -572,13 +619,62 @@
 		}
 
 		.feature-icon {
-			width: 40px;
-			height: 40px;
+			width: 32px;
+			height: 32px;
+		}
+
+		.feature-text h4 {
+			font-size: 0.9rem;
+		}
+
+		.feature-text p {
+			font-size: 0.8rem;
+		}
+
+		.about-description {
+			font-size: 0.9rem;
+			margin-bottom: 16px;
+		}
+
+		.section-badge {
+			margin-bottom: 16px;
+			padding: 5px 14px;
+		}
+
+		.section-badge span {
+			font-size: 11px;
+		}
+
+		.section-title {
+			font-size: 1.6rem;
+			margin-bottom: 20px;
+		}
+
+		.trust-grid {
+			grid-template-columns: 1fr;
+			gap: 20px;
+		}
+
+		.trust-section {
+			padding: 30px 16px;
+		}
+
+		.trust-title {
+			font-size: 1.3rem;
+			margin-bottom: 25px;
+		}
+
+		.trust-number {
+			font-size: 2rem;
+		}
+
+		.trust-label {
+			font-size: 0.8rem;
 		}
 
 		.cta-button {
 			padding: 12px 24px;
-			font-size: 14px;
+			font-size: 0.9rem;
 			width: 100%;
 			justify-content: center;
 		}
@@ -589,7 +685,7 @@
 		}
 
 		.about-image-container {
-			max-width: 280px;
+			max-width: 260px;
 		}
 
 		.about-image {

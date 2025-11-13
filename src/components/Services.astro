@@ -113,7 +113,7 @@
 					Professioneel onderhoud, inspectie en 24/7 technische support voor al uw beveiligingssystemen.
 				</p>
 				<ul class="service-features">
-					li>Periodiek onderhoud</li>
+					<li>Periodiek onderhoud</li>
 					<li>Software updates</li>
 					<li>24/7 helpdesk</li>
 					<li>Spoed service</li>
@@ -421,7 +421,11 @@
 	/* Responsive design */
 	@media (max-width: 768px) {
 		.services {
-			padding: 60px 20px;
+			padding: 60px 16px;
+		}
+
+		.services-header {
+			margin-bottom: 50px;
 		}
 
 		.services-grid {
@@ -430,87 +434,154 @@
 		}
 
 		.service-card {
-			padding: 30px 20px;
+			padding: 25px 18px;
 			max-width: 100%;
 			overflow: hidden;
 		}
 
+		.service-icon {
+			width: 60px;
+			height: 60px;
+			margin-bottom: 18px;
+		}
+
 		.service-title {
-			font-size: 20px;
+			font-size: 1.3rem;
 			line-height: 1.3;
+			margin-bottom: 12px;
 		}
 
 		.service-description {
-			font-size: 15px;
+			font-size: 0.95rem;
 			line-height: 1.5;
+			margin-bottom: 18px;
+		}
+
+		.service-features {
+			margin-bottom: 24px;
 		}
 
 		.service-features li {
-			font-size: 13px;
+			font-size: 0.85rem;
 			line-height: 1.4;
-			margin-bottom: 8px;
+			margin-bottom: 6px;
+			padding-left: 20px;
 		}
 
 		.services-cta {
 			padding: 40px 20px;
+			margin-top: 60px;
 		}
 
 		.cta-title {
-			font-size: 1.5rem;
+			font-size: 1.4rem;
 			line-height: 1.3;
+			margin-bottom: 12px;
 		}
 
 		.cta-description {
-			font-size: 16px;
+			font-size: 0.95rem;
 			line-height: 1.5;
+			margin-bottom: 24px;
 		}
 
 		.section-title {
-			font-size: 2rem;
+			font-size: 1.8rem;
 			line-height: 1.2;
+			margin-bottom: 20px;
 		}
 
 		.section-description {
-			font-size: 16px;
+			font-size: 1rem;
 			line-height: 1.5;
+		}
+
+		.section-badge {
+			margin-bottom: 20px;
+			padding: 6px 16px;
+		}
+
+		.section-badge span {
+			font-size: 12px;
 		}
 	}
 
 	@media (max-width: 480px) {
 		.services {
-			padding: 40px 15px;
+			padding: 50px 12px;
+		}
+
+		.services-header {
+			margin-bottom: 40px;
 		}
 
 		.service-card {
-			padding: 25px 15px;
+			padding: 20px 16px;
+		}
+
+		.service-icon {
+			width: 50px;
+			height: 50px;
+			margin-bottom: 16px;
 		}
 
 		.service-title {
-			font-size: 18px;
+			font-size: 1.2rem;
+			margin-bottom: 10px;
 		}
 
 		.service-description {
-			font-size: 14px;
+			font-size: 0.9rem;
+			margin-bottom: 16px;
 		}
 
 		.service-features li {
-			font-size: 12px;
+			font-size: 0.8rem;
+			margin-bottom: 5px;
+			padding-left: 18px;
 		}
 
 		.section-title {
-			font-size: 1.5rem;
+			font-size: 1.6rem;
+			margin-bottom: 16px;
 		}
 
 		.section-description {
-			font-size: 14px;
+			font-size: 0.9rem;
+		}
+
+		.section-badge {
+			margin-bottom: 16px;
+			padding: 5px 14px;
+		}
+
+		.section-badge span {
+			font-size: 11px;
+		}
+
+		.services-cta {
+			padding: 35px 16px;
+			margin-top: 50px;
 		}
 
 		.cta-title {
-			font-size: 1.3rem;
+			font-size: 1.2rem;
+			margin-bottom: 10px;
 		}
 
 		.cta-description {
-			font-size: 14px;
+			font-size: 0.9rem;
+			margin-bottom: 20px;
+		}
+
+		.cta-btn {
+			padding: 14px 24px;
+			font-size: 0.9rem;
+		}
+
+		.service-btn {
+			padding: 10px 20px;
+			font-size: 0.85rem;
 		}
 	}
 </style>
