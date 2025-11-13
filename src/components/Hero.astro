@@ -114,6 +114,16 @@
 		contain: layout;
 	}
 
+	/* Mobile specific height */
+	@media (max-width: 768px) {
+		.hero {
+			height: auto;
+			min-height: calc(100vh - 100px);
+			align-items: flex-start;
+			padding-top: 20px;
+		}
+	}
+
 	.hero-background {
 		position: absolute;
 		top: 0;
