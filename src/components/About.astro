@@ -713,10 +713,22 @@
 					trustNumbers.forEach(number => {
 						const text = number.textContent;
 						let current = 0;
-						const target = parseInt(text) || 0;
-						const suffix = text.replace(/[0-9]/g, '');
+						let target = 0;
+						let suffix = '';
+						let is24_7 = false;
+
+						// Special handling for 24/7 - count both numbers
+						if (text === '24/7') {
+							// Use 31 steps (0-24 for first part, 1-7 for second part)
+							target = 31;
+							is24_7 = true;
+						} else {
+							target = parseInt(text) || 0;
+							suffix = text.replace(/[0-9]/g, '');
+						}
 
 						if (target > 0) {
+							// All animations use the same duration: 30 steps * 50ms = 1.5 seconds
 							const increment = target / 30;
 							const timer = setInterval(() => {
 								current += increment;
@@ -724,7 +736,18 @@
 									current = target;
 									clearInterval(timer);
 								}
-								number.textContent = Math.floor(current) + suffix;
+								if (is24_7) {
+									const step = Math.floor(current);
+									if (step <= 24) {
+										number.textContent = step + '/';
+									} else {
+										const secondStep = step - 24;
+										const secondNumber = Math.min(secondStep * 7 / 7, 7);
+										number.textContent = '24/' + Math.floor(secondNumber);
+									}
+								} else {
+									number.textContent = Math.floor(current) + suffix;
+								}
 							}, 50);
 						}
 					});
