@@ -6,7 +6,11 @@
       "WebFetch(domain:www.arlo.com)",
       "WebFetch(domain:www.adt.com)",
       "Bash(npm run dev:*)",
-      "WebFetch(domain:unsplash.com)"
+      "WebFetch(domain:unsplash.com)",
+      "Bash(mkdir:*)",
+      "Bash(netstat:*)",
+      "Bash(findstr:*)",
+      "Bash(powershell:*)"
     ],
     "deny": [],
     "ask": []
