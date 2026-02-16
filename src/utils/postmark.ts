@@ -1,9 +1,5 @@
-import postmark from 'postmark';
-
-const POSTMARK_API_KEY = '0d66fee0-945c-49e0-b671-0e5c939ff2b6';
+const RESEND_API_KEY = import.meta.env.RESEND_API_KEY;
 const BCC_RECIPIENTS = ['info@secudat.nl', 'info@brandways.nl'];
-
-export const postmarkClient = new postmark.ServerClient(POSTMARK_API_KEY);
 
 export interface EmailOptions {
   to: string;
@@ -15,19 +11,32 @@ export interface EmailOptions {
 
 export const sendEmail = async (options: EmailOptions) => {
   try {
-    const emailPayload = {
-      From: options.from || 'info@secudat.nl',
-      To: options.to,
-      Bcc: BCC_RECIPIENTS.join(','),
-      Subject: options.subject,
-      HtmlBody: options.htmlBody,
-      TextBody: options.textBody || '',
-    };
+    const response = await fetch('https://api.resend.com/emails', {
+      method: 'POST',
+      headers: {
+        'Authorization': `Bearer ${RESEND_API_KEY}`,
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify({
+        from: options.from || 'info@secudat.nl',
+        to: options.to,
+        bcc: BCC_RECIPIENTS.join(','),
+        subject: options.subject,
+        html: options.htmlBody,
+        text: options.textBody || '',
+      }),
+    });
 
-    const response = await postmarkClient.sendEmail(emailPayload);
-    return { success: true, message: 'Email sent successfully', response };
+    if (!response.ok) {
+      const error = await response.text();
+      console.error('Resend error:', error);
+      return { success: false, message: 'Failed to send email', error };
+    }
+
+    const data = await response.json();
+    return { success: true, message: 'Email sent successfully', response: data };
   } catch (error) {
-    console.error('Postmark error:', error);
+    console.error('Resend error:', error);
     return {
       success: false,
       message: 'Failed to send email',
