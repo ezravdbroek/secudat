@@ -1,8 +1,11 @@
 import type { APIRoute } from 'astro';
 import { sendEmail } from '../../utils/postmark';
 
-export const POST: APIRoute = async ({ request }) => {
+export const POST: APIRoute = async ({ request, locals }) => {
   try {
+    const { env } = locals.runtime as { env: { RESEND_API_KEY: string } };
+    const RESEND_API_KEY = env.RESEND_API_KEY;
+
     const formData = await request.formData();
 
     const firstName = formData.get('firstName') as string;
@@ -116,7 +119,8 @@ export const POST: APIRoute = async ({ request }) => {
       subject: `Contactformulier: ${subjectText} - ${firstName} ${lastName}`,
       htmlBody,
       textBody,
-      from: email
+      from: email,
+      resendApiKey: RESEND_API_KEY
     });
 
     if (result.success) {

@@ -1,4 +1,3 @@
-const RESEND_API_KEY = import.meta.env.RESEND_API_KEY;
 const BCC_RECIPIENTS = ['info@secudat.nl', 'info@brandways.nl'];
 
 export interface EmailOptions {
@@ -7,6 +6,7 @@ export interface EmailOptions {
   htmlBody: string;
   textBody?: string;
   from?: string;
+  resendApiKey: string;
 }
 
 export const sendEmail = async (options: EmailOptions) => {
@@ -14,7 +14,7 @@ export const sendEmail = async (options: EmailOptions) => {
     const response = await fetch('https://api.resend.com/emails', {
       method: 'POST',
       headers: {
-        'Authorization': `Bearer ${RESEND_API_KEY}`,
+        'Authorization': `Bearer ${options.resendApiKey}`,
         'Content-Type': 'application/json',
       },
       body: JSON.stringify({
